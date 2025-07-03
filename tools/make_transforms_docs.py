@@ -20,7 +20,7 @@ IGNORED_CLASSES = {
 
 
 def make_augmentation_docs_link(cls) -> str:
-    return f"[{cls.__name__}](https://explore.algorave.ai/transform/{cls.__name__})"
+    return f"[{cls.__name__}](https://github.com/belfner/algorave/blob/main/algorave/augmentations/)"
 
 
 def parse_args() -> argparse.Namespace:

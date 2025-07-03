@@ -1,6 +1,6 @@
-# Contributing to Albumentations
+# Contributing to Algorave
 
-Thank you for your interest in contributing to [Albumentations](https://algorave.ai/)! This guide will help you get started with contributing to our image augmentation library.
+Thank you for your interest in contributing to Algorave! This guide will help you get started with contributing to our image augmentation library.
 
 ## Quick Start
 

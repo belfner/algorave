@@ -1,10 +1,10 @@
 # Coding Guidelines
 
-This document outlines the coding standards and best practices for contributing to Albumentations.
+This document outlines the coding standards and best practices for contributing to Algorave.
 
 ## Important Note About Guidelines
 
-These guidelines represent our current best practices, developed through experience maintaining and expanding the Albumentations codebase. While some existing code may not strictly follow these standards (due to historical reasons), we are gradually refactoring the codebase to align with these guidelines.
+These guidelines represent our current best practices, developed through experience maintaining and expanding the Algorave codebase. While some existing code may not strictly follow these standards (due to historical reasons), we are gradually refactoring the codebase to align with these guidelines.
 
 **For new contributions:**
 

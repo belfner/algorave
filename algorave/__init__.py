@@ -7,8 +7,8 @@ try:
     __maintainer__ = _metadata["Maintainer"]
 except Exception:  # noqa: BLE001
     __version__ = "unknown"
-    __author__ = "Vladimir Iglovikov"
-    __maintainer__ = "Vladimir Iglovikov"
+    __author__ = "Ben Elfner"
+    __maintainer__ = "Ben Elfner"
 
 from contextlib import suppress
 

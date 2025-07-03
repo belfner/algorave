@@ -2,10 +2,11 @@
 
 ## Current Maintainer
 
-Vladimir Iglovikov
+Ben Elfner (algorave@belfner.com)
 
-## Emeritus Team Members
+## Original Albumentations Team (Emeritus)
 
+- Vladimir Iglovikov
 - Alexander Buslaev
 - Alex Parinov
 - Eugene Khvedchenya

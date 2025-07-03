@@ -1,6 +1,6 @@
 # Setting Up Your Development Environment
 
-This guide will help you set up your development environment for contributing to Albumentations.
+This guide will help you set up your development environment for contributing to Algorave.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ This guide will help you set up your development environment for contributing to
 
 ### 1. Fork and Clone the Repository
 
-1. Fork the [Albumentations repository](https://github.com/algorave-team/algorave) on GitHub
+1. Fork the [Algorave repository](https://github.com/belfner/algorave) on GitHub
 2. Clone your fork locally:
 
 ```bash
