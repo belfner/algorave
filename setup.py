@@ -6,7 +6,7 @@ INSTALL_REQUIRES = [
     "PyYAML",
     "typing-extensions>=4.9.0; python_version<'3.10'",
     "pydantic>=2.9.2",
-    "algocore==0.0.28",
+    "algocore==0.1.0",
     "eval-type-backport; python_version<'3.10'",
 ]
 
