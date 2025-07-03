@@ -24,7 +24,7 @@ requirements:
     - pydantic>=2.9
     - pytorch
     - typing_extensions
-    - opencv-python-headless
+    - opencv-python
 
   run:
     - python
@@ -33,7 +33,7 @@ requirements:
     - pyyaml
     - pydantic>=2.9.2
     - typing-extensions>=4.9.0
-    - opencv-python-headless>=4.9.0.80
+    - opencv-python>=4.9.0.80
     - albucore==0.0.22
 
 suggests:
