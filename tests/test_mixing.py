@@ -5,7 +5,7 @@ import numpy as np
 import pytest
 from deepdiff import DeepDiff
 
-import albumentations as A
+import algorave as A
 from tests.conftest import UINT8_IMAGES, FLOAT32_IMAGES, MULTI_IMAGES
 
 

@@ -2,7 +2,7 @@
 """Pre-commit hook to check that classes inheriting from BaseModel (like InitSchema)
 do not have default values in their field definitions.
 
-This enforces the albumentations coding guideline:
+This enforces the algorave coding guideline:
 "We do not have ANY default values in the InitSchema class"
 """
 

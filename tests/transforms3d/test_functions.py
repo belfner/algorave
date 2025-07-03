@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 import numpy as np
-from albumentations.augmentations.transforms3d import functional as f3d
+from algorave.augmentations.transforms3d import functional as f3d
 
 @pytest.mark.parametrize(
     "input_shape,n_channels", [

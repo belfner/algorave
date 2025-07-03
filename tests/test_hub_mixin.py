@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 import pytest
 
-from albumentations.core.hub_mixin import HubMixin, is_huggingface_hub_available
+from algorave.core.hub_mixin import HubMixin, is_huggingface_hub_available
 
 # Skip tests if huggingface_hub is not available
 pytestmark = pytest.mark.skipif(
@@ -42,7 +42,7 @@ def test_windows_path_handling(path_string, expected_posix):
         path_string: Input path with various formats
         expected_posix: Expected path after conversion to POSIX format
     """
-    with patch("albumentations.core.hub_mixin.hf_hub_download") as mock_download:
+    with patch("algorave.core.hub_mixin.hf_hub_download") as mock_download:
         mock_download.return_value = "config.json"
 
         # Also mock _from_pretrained to avoid file operations
@@ -62,7 +62,7 @@ def test_windows_path_handling(path_string, expected_posix):
 @pytest.mark.skipif(platform.system() != "Windows", reason="Test only relevant on Windows")
 def test_real_windows_paths():
     """Test with real Windows paths when running on Windows."""
-    with patch("albumentations.core.hub_mixin.hf_hub_download") as mock_download:
+    with patch("algorave.core.hub_mixin.hf_hub_download") as mock_download:
         mock_download.return_value = "mocked_file_path"
 
         with patch.object(TestTransform, "_from_pretrained") as mock_from_pretrained:

@@ -11,9 +11,9 @@ from albucore import (
     to_float,
 )
 
-import albumentations.augmentations.pixel.functional as fpixel
-import albumentations.augmentations.geometric.functional as fgeometric
-from albumentations.core.type_definitions import d4_group_elements
+import algorave.augmentations.pixel.functional as fpixel
+import algorave.augmentations.geometric.functional as fgeometric
+from algorave.core.type_definitions import d4_group_elements
 from tests.conftest import (
     IMAGES,
     RECTANGULAR_IMAGES,

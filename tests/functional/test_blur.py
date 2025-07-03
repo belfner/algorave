@@ -1,6 +1,6 @@
 from random import Random
 import pytest
-from albumentations.augmentations.blur import functional as fblur
+from algorave.augmentations.blur import functional as fblur
 import numpy as np
 
 @pytest.mark.parametrize(

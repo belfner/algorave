@@ -4,8 +4,8 @@ from typing import Any, Dict, Optional, Tuple, Union
 import pytest
 from pydantic import BaseModel
 
-import albumentations as A
-from albumentations.core.pydantic import (
+import algorave as A
+from algorave.core.pydantic import (
     NonNegativeFloatRangeType,
     NonNegativeIntRangeType,
     OnePlusFloatRangeType,
@@ -16,8 +16,8 @@ from albumentations.core.pydantic import (
     create_symmetric_range,
     process_non_negative_range,
 )
-from albumentations.core.transforms_interface import ImageOnlyTransform
-from albumentations.core.validation import ValidatedTransformMeta
+from algorave.core.transforms_interface import ImageOnlyTransform
+from algorave.core.validation import ValidatedTransformMeta
 
 
 @pytest.mark.parametrize(

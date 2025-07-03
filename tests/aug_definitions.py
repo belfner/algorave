@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-import albumentations as A
+import algorave as A
 
 
 transforms2metadata_key = {

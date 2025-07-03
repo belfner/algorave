@@ -7,7 +7,7 @@ from albucore import to_float
 
 from .aug_definitions import transforms2metadata_key
 
-import albumentations as A
+import algorave as A
 from tests.conftest import (
     IMAGES,
     RECTANGULAR_UINT8_IMAGE,

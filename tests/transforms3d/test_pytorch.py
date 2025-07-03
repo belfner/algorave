@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 import torch
-import albumentations as A
+import algorave as A
 
 test_cases = [
     pytest.param(

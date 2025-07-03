@@ -4,7 +4,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from albumentations.check_version import (
+from algorave.check_version import (
     check_for_updates,
     fetch_version_info,
     get_opener,
@@ -41,7 +41,7 @@ def test_fetch_version_info(status_code, expected_result):
     mock_opener = MagicMock()
     mock_opener.open.return_value = mock_response
 
-    with patch("albumentations.check_version.get_opener", return_value=mock_opener):
+    with patch("algorave.check_version.get_opener", return_value=mock_opener):
         result = fetch_version_info()
         assert result == expected_result
 
@@ -70,9 +70,9 @@ def test_parse_version(input_data, expected_version):
 )
 def test_check_for_updates(fetch_data, current_version, expected_warning):
     with (
-        patch("albumentations.check_version.fetch_version_info", return_value=fetch_data),
-        patch("albumentations.check_version.current_version", current_version),
-        patch("albumentations.check_version.warn") as mock_warn,
+        patch("algorave.check_version.fetch_version_info", return_value=fetch_data),
+        patch("algorave.check_version.current_version", current_version),
+        patch("algorave.check_version.warn") as mock_warn,
     ):
         check_for_updates()
         assert mock_warn.called == expected_warning
@@ -80,8 +80,8 @@ def test_check_for_updates(fetch_data, current_version, expected_warning):
 
 def test_check_for_updates_exception():
     with (
-        patch("albumentations.check_version.fetch_version_info", side_effect=Exception("Test error")),
-        patch("albumentations.check_version.warn") as mock_warn,
+        patch("algorave.check_version.fetch_version_info", side_effect=Exception("Test error")),
+        patch("algorave.check_version.warn") as mock_warn,
     ):
         check_for_updates()
         mock_warn.assert_called_once()
@@ -109,7 +109,7 @@ def test_fetch_version_info_success():
     mock_opener = MagicMock()
     mock_opener.open.return_value = mock_response
 
-    with patch("albumentations.check_version.get_opener", return_value=mock_opener):
+    with patch("algorave.check_version.get_opener", return_value=mock_opener):
         data = fetch_version_info()
         assert data == '{"info": {"version": "1.0.0"}}'
 
@@ -119,16 +119,16 @@ def test_fetch_version_info_failure():
         assert data == ""
 
 def test_check_for_updates_no_update():
-    with patch("albumentations.check_version.fetch_version_info", return_value='{"info": {"version": "1.0.0"}}'):
-        with patch("albumentations.check_version.__version__", "1.0.0"):
+    with patch("algorave.check_version.fetch_version_info", return_value='{"info": {"version": "1.0.0"}}'):
+        with patch("algorave.check_version.__version__", "1.0.0"):
             with patch("warnings.warn") as mock_warn:
                 check_for_updates()
                 mock_warn.assert_not_called()
 
 def test_check_for_updates_with_update():
-    with patch("albumentations.check_version.fetch_version_info", return_value='{"info": {"version": "2.0.0"}}'):
-        with patch("albumentations.check_version.current_version", "1.0.0"):
-            with patch("albumentations.check_version.warn") as mock_warn:  # Patch the imported warn
+    with patch("algorave.check_version.fetch_version_info", return_value='{"info": {"version": "2.0.0"}}'):
+        with patch("algorave.check_version.current_version", "1.0.0"):
+            with patch("algorave.check_version.warn") as mock_warn:  # Patch the imported warn
                 check_for_updates()
                 mock_warn.assert_called_once()
 

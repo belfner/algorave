@@ -1,11 +1,11 @@
 import pytest
 import numpy as np
 from skimage.measure import label as ski_label
-from albumentations.augmentations.dropout.functional import label as cv_label
+from algorave.augmentations.dropout.functional import label as cv_label
 
 from albucore import MAX_VALUES_BY_DTYPE
 
-import albumentations.augmentations.dropout.functional as fdropout
+import algorave.augmentations.dropout.functional as fdropout
 
 from tests.utils import set_seed
 

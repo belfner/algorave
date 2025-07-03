@@ -8,8 +8,8 @@ import sys
 from pathlib import Path
 
 sys.path.append("..")
-import albumentations
-from albumentations.core.type_definitions import Targets
+import algorave
+from algorave.core.type_definitions import Targets
 
 IGNORED_CLASSES = {
     "BasicTransform",
@@ -20,7 +20,7 @@ IGNORED_CLASSES = {
 
 
 def make_augmentation_docs_link(cls) -> str:
-    return f"[{cls.__name__}](https://explore.albumentations.ai/transform/{cls.__name__})"
+    return f"[{cls.__name__}](https://explore.algorave.ai/transform/{cls.__name__})"
 
 
 def parse_args() -> argparse.Namespace:
@@ -54,12 +54,12 @@ def is_deprecated(cls) -> bool:
 
 def get_image_only_transforms_info():
     image_only_info = {}
-    members = inspect.getmembers(albumentations)
+    members = inspect.getmembers(algorave)
     for name, cls in members:
         if (
             inspect.isclass(cls)
-            and issubclass(cls, albumentations.ImageOnlyTransform)
-            and not issubclass(cls, albumentations.Transform3D)
+            and issubclass(cls, algorave.ImageOnlyTransform)
+            and not issubclass(cls, algorave.Transform3D)
             and name not in IGNORED_CLASSES
         ) and not is_deprecated(cls):
             image_only_info[name] = {
@@ -70,12 +70,12 @@ def get_image_only_transforms_info():
 
 def get_dual_transforms_info():
     dual_transforms_info = {}
-    members = inspect.getmembers(albumentations)
+    members = inspect.getmembers(algorave)
     for name, cls in members:
         if (
             inspect.isclass(cls)
-            and issubclass(cls, albumentations.DualTransform)
-            and not issubclass(cls, albumentations.Transform3D)  # Exclude 3D transforms
+            and issubclass(cls, algorave.DualTransform)
+            and not issubclass(cls, algorave.Transform3D)  # Exclude 3D transforms
             and name not in IGNORED_CLASSES
         ) and not is_deprecated(cls):
             dual_transforms_info[name] = {
@@ -87,13 +87,13 @@ def get_dual_transforms_info():
 
 def get_3d_transforms_info():
     transforms_3d_info = {}
-    members = inspect.getmembers(albumentations)
+    members = inspect.getmembers(algorave)
     for name, cls in members:
         if (
-            inspect.isclass(cls) and issubclass(cls, albumentations.Transform3D) and name not in IGNORED_CLASSES
+            inspect.isclass(cls) and issubclass(cls, algorave.Transform3D) and name not in IGNORED_CLASSES
         ) and not is_deprecated(cls):
             # Get targets from class or parent class if not defined
-            targets = cls._targets if hasattr(cls, "_targets") else albumentations.Transform3D._targets
+            targets = cls._targets if hasattr(cls, "_targets") else algorave.Transform3D._targets
 
             transforms_3d_info[name] = {
                 "targets": targets if isinstance(targets, tuple) else (targets,),

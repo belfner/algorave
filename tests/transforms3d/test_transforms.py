@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-import albumentations as A
+import algorave as A
 import cv2
 
 from tests.conftest import RECTANGULAR_UINT8_IMAGE, SQUARE_UINT8_IMAGE

@@ -6,11 +6,11 @@ import cv2
 import numpy as np
 import pytest
 
-import albumentations as A
-from albumentations import RandomCrop, RandomResizedCrop, RandomSizedCrop, Rotate
-from albumentations.augmentations.crops.functional import crop_bboxes_by_coords
-from albumentations.augmentations.geometric import functional as fgeometric
-from albumentations.core.bbox_utils import (
+import algorave as A
+from algorave import RandomCrop, RandomResizedCrop, RandomSizedCrop, Rotate
+from algorave.augmentations.crops.functional import crop_bboxes_by_coords
+from algorave.augmentations.geometric import functional as fgeometric
+from algorave.core.bbox_utils import (
     BboxProcessor,
     bboxes_from_masks,
     calculate_bbox_areas_in_pixels,
@@ -25,10 +25,10 @@ from albumentations.core.bbox_utils import (
     bboxes_to_mask,
     mask_to_bboxes,
 )
-from albumentations.core.composition import BboxParams, Compose, ReplayCompose
-from albumentations.core.transforms_interface import BasicTransform, NoOp
+from algorave.core.composition import BboxParams, Compose, ReplayCompose
+from algorave.core.transforms_interface import BasicTransform, NoOp
 
-from albumentations.augmentations.dropout.functional import resize_boxes_to_visible_area
+from algorave.augmentations.dropout.functional import resize_boxes_to_visible_area
 
 
 
@@ -300,7 +300,7 @@ def test_convert_bboxes_to_albumentations_yolo_invalid_range():
 def test_convert_bboxes_to_albumentations_check_validity(source_format, mocker):
     bboxes = np.array([[0.1, 0.2, 0.3, 0.4]])
     image_shape = (100, 200)
-    mock_check_bboxes = mocker.patch("albumentations.core.bbox_utils.check_bboxes")
+    mock_check_bboxes = mocker.patch("algorave.core.bbox_utils.check_bboxes")
 
     convert_bboxes_to_albumentations(bboxes, source_format, image_shape, check_validity=True)
 
@@ -311,7 +311,7 @@ def test_convert_bboxes_to_albumentations_check_validity(source_format, mocker):
 def test_convert_bboxes_to_albumentations_calls_normalize(source_format, mocker):
     bboxes = np.array([[10, 20, 30, 40]])
     image_shape = (100, 200)
-    mock_normalize_bboxes = mocker.patch("albumentations.core.bbox_utils.normalize_bboxes", return_value=bboxes)
+    mock_normalize_bboxes = mocker.patch("algorave.core.bbox_utils.normalize_bboxes", return_value=bboxes)
 
     convert_bboxes_to_albumentations(bboxes, source_format, image_shape)
 
@@ -321,7 +321,7 @@ def test_convert_bboxes_to_albumentations_calls_normalize(source_format, mocker)
 def test_convert_bboxes_to_albumentations_yolo_does_not_call_normalize(mocker):
     bboxes = np.array([[0.1, 0.2, 0.3, 0.4]])
     image_shape = (100, 200)
-    mock_normalize_bboxes = mocker.patch("albumentations.core.bbox_utils.normalize_bboxes")
+    mock_normalize_bboxes = mocker.patch("algorave.core.bbox_utils.normalize_bboxes")
 
     convert_bboxes_to_albumentations(bboxes, "yolo", image_shape)
 
@@ -331,21 +331,21 @@ def test_convert_bboxes_to_albumentations_yolo_does_not_call_normalize(mocker):
 @pytest.mark.parametrize(
     "bboxes, target_format, image_shape, expected",
     [
-        # Albumentations to COCO format
+        # Algorave to COCO format
         (
             np.array([[0.05, 0.2, 0.2, 0.6], [0.25, 0.6, 0.35, 0.9]]),
             "coco",
             {"height": 100, "width": 200},
             np.array([[10, 20, 30, 40], [50, 60, 20, 30]]),
         ),
-        # Albumentations to Pascal VOC format
+        # Algorave to Pascal VOC format
         (
             np.array([[0.05, 0.2, 0.2, 0.6], [0.25, 0.6, 0.35, 0.9]]),
             "pascal_voc",
             {"height": 100, "width": 200},
             np.array([[10, 20, 40, 60], [50, 60, 70, 90]]),
         ),
-        # Albumentations to YOLO format
+        # Algorave to YOLO format
         (
             np.array([[0.15, 0.3, 0.35, 0.7], [0.6, 0.65, 0.8, 0.95]]),
             "yolo",
@@ -397,7 +397,7 @@ def test_convert_bboxes_from_albumentations_invalid_format(target_format):
 def test_convert_bboxes_from_albumentations_check_validity(mocker):
     bboxes = np.array([[0.1, 0.2, 0.3, 0.4]])
     image_shape = (100, 200)
-    mock_check_bboxes = mocker.patch("albumentations.core.bbox_utils.check_bboxes")
+    mock_check_bboxes = mocker.patch("algorave.core.bbox_utils.check_bboxes")
 
     convert_bboxes_from_albumentations(bboxes, "coco", image_shape, check_validity=True)
 
@@ -408,7 +408,7 @@ def test_convert_bboxes_from_albumentations_check_validity(mocker):
 def test_convert_bboxes_from_albumentations_calls_denormalize(target_format, mocker):
     bboxes = np.array([[0.05, 0.2, 0.2, 0.6]])
     image_shape = {"height": 100, "width": 200}
-    mock_denormalize_bboxes = mocker.patch("albumentations.core.bbox_utils.denormalize_bboxes", return_value=bboxes)
+    mock_denormalize_bboxes = mocker.patch("algorave.core.bbox_utils.denormalize_bboxes", return_value=bboxes)
 
     convert_bboxes_from_albumentations(bboxes, target_format, image_shape)
 
@@ -418,7 +418,7 @@ def test_convert_bboxes_from_albumentations_calls_denormalize(target_format, moc
 def test_convert_bboxes_from_albumentations_yolo_does_not_call_denormalize(mocker):
     bboxes = np.array([[0.1, 0.2, 0.3, 0.4]])
     image_shape = {"height": 100, "width": 200}
-    mock_denormalize_bboxes = mocker.patch("albumentations.core.bbox_utils.denormalize_bboxes")
+    mock_denormalize_bboxes = mocker.patch("algorave.core.bbox_utils.denormalize_bboxes")
 
     convert_bboxes_from_albumentations(bboxes, "yolo", image_shape)
 
@@ -433,12 +433,12 @@ def test_convert_bboxes_from_albumentations_yolo_does_not_call_denormalize(mocke
         ("yolo", {"height": 100, "width": 200}),
     ],
 )
-def test_round_trip_to_from_albumentations(original_format, image_shape):
+def test_round_trip_to_from_algorave(original_format, image_shape):
     original_bboxes = np.array([[10, 20, 30, 40], [50, 60, 70, 80]])
     if original_format == "yolo":
         original_bboxes = np.array([[0.25, 0.3, 0.2, 0.2], [0.6, 0.7, 0.2, 0.2]])
 
-    # Convert to albumentations format
+    # Convert to algorave format
     albu_bboxes = convert_bboxes_to_albumentations(original_bboxes, original_format, image_shape)
 
     # Convert back to original format
@@ -455,13 +455,13 @@ def test_round_trip_to_from_albumentations(original_format, image_shape):
         ("yolo", {"height": 100, "width": 200}),
     ],
 )
-def test_round_trip_from_to_albumentations(target_format, image_shape):
+def test_round_trip_from_to_algorave(target_format, image_shape):
     albu_bboxes = np.array([[0.05, 0.1, 0.15, 0.2], [0.25, 0.3, 0.35, 0.4]])
 
-    # Convert from albumentations format
+    # Convert from algorave format
     converted_bboxes = convert_bboxes_from_albumentations(albu_bboxes, target_format, image_shape)
 
-    # Convert back to albumentations format
+    # Convert back to algorave format
     reconverted_bboxes = convert_bboxes_to_albumentations(converted_bboxes, target_format, image_shape)
 
     np.testing.assert_allclose(reconverted_bboxes, albu_bboxes, rtol=1e-5)
@@ -751,7 +751,7 @@ def test_union_of_bboxes_precision():
     [
         ("coco", [[15, 12, 30, 40], [50, 50, 15, 40]], ["cat", "dog"]),
         ("pascal_voc", [[15, 12, 30, 40], [50, 50, 55, 60]], [1, 2]),
-        ("albumentations", [[0.2, 0.3, 0.4, 0.5], [0.1, 0.1, 0.3, 0.3]], ["label1", "label2"]),
+        ("algorave", [[0.2, 0.3, 0.4, 0.5], [0.1, 0.1, 0.3, 0.3]], ["label1", "label2"]),
         ("yolo", [[0.15, 0.22, 0.3, 0.4], [0.5, 0.5, 0.15, 0.4]], [0, 3]),
     ],
 )
@@ -781,7 +781,7 @@ def test_bbox_processor_roundtrip(bbox_format, bboxes, labels):
     [
         ("coco", [[15, 12, 30, 40], [50, 50, 15, 40]], ["cat", "dog"], [1, 2]),
         ("pascal_voc", [[15, 12, 30, 40], [50, 50, 55, 60]], [1, 2], ["label1", "label2"]),
-        ("albumentations", [[0.2, 0.3, 0.4, 0.5], [0.1, 0.1, 0.3, 0.3]], ["label1", "label2"], [0, 1]),
+        ("algorave", [[0.2, 0.3, 0.4, 0.5], [0.1, 0.1, 0.3, 0.3]], ["label1", "label2"], [0, 1]),
         ("yolo", [[0.15, 0.22, 0.3, 0.4], [0.5, 0.5, 0.15, 0.4]], [0, 1], ["type1", "type2"]),
     ],
 )
@@ -883,7 +883,7 @@ def test_random_sized_crop_size() -> None:
     bboxes = [(0.2, 0.3, 0.6, 0.8, 2), (0.3, 0.4, 0.7, 0.9, 99)]
     aug = A.Compose(
         [RandomSizedCrop(min_max_height=(70, 90), size=(50, 50), p=1.0)],
-        bbox_params={"format": "albumentations"},
+        bbox_params={"format": "algorave"},
         seed=42,
         strict=True,
     )
@@ -895,7 +895,7 @@ def test_random_sized_crop_size() -> None:
 def test_random_resized_crop_size() -> None:
     image = np.ones((100, 100, 3))
     bboxes = [(0.2, 0.3, 0.6, 0.8, 2), (0.3, 0.4, 0.7, 0.9, 99)]
-    aug = A.Compose([RandomResizedCrop(size=(50, 50), p=1.0)], bbox_params={"format": "albumentations"}, seed=42, strict=True)
+    aug = A.Compose([RandomResizedCrop(size=(50, 50), p=1.0)], bbox_params={"format": "algorave"}, seed=42, strict=True)
     transformed = aug(image=image, bboxes=bboxes)
     assert transformed["image"].shape == (50, 50, 3)
     assert len(bboxes) == len(transformed["bboxes"])
@@ -1618,7 +1618,7 @@ def test_distortion_bboxes_complex_distortion():
 import numpy as np
 import pytest
 
-from albumentations.augmentations.geometric.functional import bboxes_grid_shuffle
+from algorave.augmentations.geometric.functional import bboxes_grid_shuffle
 
 
 def test_bboxes_grid_shuffle_basic():
@@ -1896,8 +1896,8 @@ def test_bbox_processor_invalid_no_filter(bbox_format, bboxes):
         # Pascal VOC format: [x_min, y_min, x_max, y_max]
         ("pascal_voc", [[10, 10, 5, 20], [10, 10, 30, 30]], [[10, 10, 30, 30]]),
 
-        # Albumentations format: normalized [x_min, y_min, x_max, y_max]
-        ("albumentations", [[0.1, 0.1, 0.05, 0.2], [0.1, 0.1, 0.3, 0.3]], [[0.1, 0.1, 0.3, 0.3]]),
+        # Algorave format: normalized [x_min, y_min, x_max, y_max]
+        ("algorave", [[0.1, 0.1, 0.05, 0.2], [0.1, 0.1, 0.3, 0.3]], [[0.1, 0.1, 0.3, 0.3]]),
 
         # YOLO format: normalized [x_center, y_center, width, height]
         ("yolo", [[0.5, 0.5, -0.1, 0.2], [0.5, 0.5, 0.2, 0.2]], [[0.5, 0.5, 0.2, 0.2]]),
@@ -1923,7 +1923,7 @@ def test_bbox_processor_filter_invalid(bbox_format, bboxes, expected_bboxes):
     processor.preprocess(data)
 
     # Convert filtered bboxes back to original format for comparison
-    if bbox_format != "albumentations":
+    if bbox_format != "algorave":
         data["bboxes"] = convert_bboxes_from_albumentations(
             data["bboxes"],
             bbox_format,
@@ -2284,7 +2284,7 @@ def test_bbox_processor_max_accept_ratio(bboxes, shape, max_accept_ratio, expect
     }
 
     params = BboxParams(
-        format="albumentations",
+        format="algorave",
         max_accept_ratio=max_accept_ratio,
     )
     processor = BboxProcessor(params)
@@ -2306,7 +2306,7 @@ def test_compose_with_max_accept_ratio(bboxes, shape, max_accept_ratio, expected
     transform = A.Compose(
         [A.NoOp(p=1.0)],
         bbox_params=BboxParams(
-            format="albumentations",
+            format="algorave",
             max_accept_ratio=max_accept_ratio,
             label_fields=[],
         ),
@@ -2354,7 +2354,7 @@ def test_compose_with_max_accept_ratio(bboxes, shape, max_accept_ratio, expected
         # Albumentations = [x_min, y_min, x_max, y_max], all normalized in [0, 1].
         # (ratio 5:1 should be filtered)
         (
-            "albumentations",
+            "algorave",
             np.array([[0.1, 0.1, 0.6, 0.2]], dtype=np.float32),
             {"height": 100, "width": 100},
             2.0,

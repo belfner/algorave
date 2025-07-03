@@ -2,10 +2,10 @@ import random
 import numpy as np
 import pytest
 
-from albumentations.augmentations.mixing.transforms import Mosaic
-from albumentations.core.composition import Compose
-from albumentations.core.bbox_utils import BboxParams
-from albumentations.core.keypoints_utils import KeypointParams
+from algorave.augmentations.mixing.transforms import Mosaic
+from algorave.core.composition import Compose
+from algorave.core.bbox_utils import BboxParams
+from algorave.core.keypoints_utils import KeypointParams
 
 
 @pytest.mark.parametrize(
@@ -128,7 +128,7 @@ def test_mosaic_identity_with_targets() -> None:
     img_size = (8, 6)
     img = np.random.randint(0, 256, size=(*img_size, 3), dtype=np.uint8)
     mask = np.random.randint(0, 2, size=img_size, dtype=np.uint8)
-    # Bbox in albumentations format [x_min, y_min, x_max, y_max, class_id]
+    # Bbox in algorave format [x_min, y_min, x_max, y_max, class_id]
     bboxes = np.array([
         [0.2, 0.3, 0.8, 0.7, 1],
         [0.1, 0.1, 0.5, 0.5, 2],
@@ -141,7 +141,7 @@ def test_mosaic_identity_with_targets() -> None:
     # Use Compose to handle bbox processing
     pipeline = Compose([
         transform
-    ], bbox_params=BboxParams(format='albumentations', label_fields=['class_labels']))
+    ], bbox_params=BboxParams(format='algorave', label_fields=['class_labels']))
 
     data = {
         "image": img.copy(),
@@ -244,7 +244,7 @@ def test_mosaic_primary_mask_metadata_no_mask() -> None:
 
 
 def test_mosaic_simplified_deterministic() -> None:
-    """Test Mosaic with fixed parameters, albumentations format, no labels."""
+    """Test Mosaic with fixed parameters, algorave format, no labels."""
     target_size = (100, 100)
     grid_yx = (1, 2)
     center_range = (0.5, 0.5)
@@ -254,9 +254,9 @@ def test_mosaic_simplified_deterministic() -> None:
     # --- Primary Data ---
     img_primary = np.ones((*target_size, 3), dtype=np.uint8) * 1
     mask_primary = np.ones(target_size, dtype=np.uint8) * 11
-    # BBoxes: Albumentations format [x_min_norm, y_min_norm, x_max_norm, y_max_norm]
+    # BBoxes: Algorave format [x_min_norm, y_min_norm, x_max_norm, y_max_norm]
     bboxes_primary = np.array([[0, 0, 1, 1]], dtype=np.float32)
-    # Keypoints: Albumentations format [x, y, Z, angle, scale]
+    # Keypoints: Algorave format [x, y, Z, angle, scale]
     keypoints_primary = np.array([[10, 10, 0, 0, 0], [50, 50, 0, 0, 0]], dtype=np.float32)
 
     # --- Metadata ---
@@ -289,8 +289,8 @@ def test_mosaic_simplified_deterministic() -> None:
     pipeline = Compose([
         transform
     ],
-    bbox_params=BboxParams(format='albumentations', min_visibility=0.0, min_area=0.0),
-    keypoint_params=KeypointParams(format='albumentations'))
+    bbox_params=BboxParams(format='algorave', min_visibility=0.0, min_area=0.0),
+    keypoint_params=KeypointParams(format='algorave'))
 
     # --- Input Data ---
     data = {

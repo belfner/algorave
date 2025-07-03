@@ -1,16 +1,16 @@
 # Albumentations
 
-[![PyPI version](https://badge.fury.io/py/albumentations.svg)](https://badge.fury.io/py/albumentations)
-![CI](https://github.com/albumentations-team/albumentations/workflows/CI/badge.svg)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/albumentations.svg?label=PyPI%20downloads)](https://pypi.org/project/albumentations/)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/albumentations.svg?label=Conda%20downloads)](https://anaconda.org/conda-forge/albumentations)
+[![PyPI version](https://badge.fury.io/py/algorave.svg)](https://badge.fury.io/py/algorave)
+![CI](https://github.com/algorave-team/algorave/workflows/CI/badge.svg)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/algorave.svg?label=PyPI%20downloads)](https://pypi.org/project/algorave/)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/algorave.svg?label=Conda%20downloads)](https://anaconda.org/conda-forge/algorave)
 
-> 📣 **Stay updated!** [Subscribe to our newsletter](https://albumentations.ai/subscribe) for the latest releases, tutorials, and tips directly from the Albumentations team.
+> 📣 **Stay updated!** [Subscribe to our newsletter](https://algorave.ai/subscribe) for the latest releases, tutorials, and tips directly from the Albumentations team.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20Albumentations%20Guru-006BFF)](https://gurubase.io/g/albumentations)
+[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20Albumentations%20Guru-006BFF)](https://gurubase.io/g/algorave)
 
-[Docs](https://albumentations.ai/docs/) | [Discord](https://discord.gg/AKPrrDYNAt) | [Twitter](https://twitter.com/albumentations) | [LinkedIn](https://www.linkedin.com/company/100504475/)
+[Docs](https://algorave.ai/docs/) | [Discord](https://discord.gg/AKPrrDYNAt) | [Twitter](https://twitter.com/algorave) | [LinkedIn](https://www.linkedin.com/company/100504475/)
 
 ## ⚠️ Important Notice: Albumentations is No Longer Maintained
 
@@ -18,7 +18,7 @@
 
 ### 🚀 Introducing AlbumentationsX - The Future of Albumentations
 
-All development has moved to **[AlbumentationsX](https://github.com/albumentations-team/AlbumentationsX)**, the next-generation successor to Albumentations.
+All development has moved to **[AlbumentationsX](https://github.com/algorave-team/AlbumentationsX)**, the next-generation successor to Albumentations.
 
 > **Note:** AlbumentationsX uses dual licensing (AGPL-3.0 / Commercial). The AGPL license has strict copyleft requirements - see details below.
 
@@ -37,7 +37,7 @@ All development has moved to **[AlbumentationsX](https://github.com/albumentatio
 
 #### 2. **Upgrade to AlbumentationsX (Dual Licensed)**
 
-- ✅ **Drop-in replacement** - Same API, just `pip install albumentationsx`
+- ✅ **Drop-in replacement** - Same API, just `pip install algoravex`
 - ✅ **Active development** - Regular updates and new features
 - ✅ **Bug fixes** - Issues are actively addressed
 - ✅ **Performance improvements** - Faster execution
@@ -54,16 +54,16 @@ All development has moved to **[AlbumentationsX](https://github.com/albumentatio
 
 ```bash
 # Uninstall original
-pip uninstall albumentations
+pip uninstall algorave
 
 # Install AlbumentationsX
-pip install albumentationsx
+pip install algoravex
 ```
 
 That's it! Your existing code continues to work without any changes:
 
 ```python
-import albumentations as A  # Same import!
+import algorave as A  # Same import!
 
 transform = A.Compose([
     A.RandomCrop(width=256, height=256),
@@ -74,8 +74,8 @@ transform = A.Compose([
 
 ### Learn More
 
-- 📦 **AlbumentationsX Repository**: <https://github.com/albumentations-team/AlbumentationsX>
-- 💰 **Commercial Licensing**: <https://albumentations.ai/pricing>
+- 📦 **AlbumentationsX Repository**: <https://github.com/algorave-team/AlbumentationsX>
+- 💰 **Commercial Licensing**: <https://algorave.ai/pricing>
 - 💬 **Discord Community**: <https://discord.gg/AKPrrDYNAt>
 
 ---
@@ -84,7 +84,7 @@ transform = A.Compose([
 
 ## GitAds Sponsored
 
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=albumentations-team/albumentations@github)](https://gitads.dev/v1/ad-track?source=albumentations-team/albumentations@github)
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=algorave-team/algorave@github)](https://gitads.dev/v1/ad-track?source=algorave-team/algorave@github)
 
 Albumentations is a Python library for image augmentation. Image augmentation is used in deep learning and computer vision tasks to increase the quality of trained models. The purpose of image augmentation is to create new training samples from the existing data.
 
@@ -93,17 +93,17 @@ Here is an example of how you can apply some [pixel-level](#pixel-level-transfor
 
 ## Why Albumentations
 
-- **Complete Computer Vision Support**: Works with [all major CV tasks](#i-want-to-use-albumentations-for-the-specific-task-such-as-classification-or-segmentation) including classification, segmentation (semantic & instance), object detection, and pose estimation.
+- **Complete Computer Vision Support**: Works with [all major CV tasks](#i-want-to-use-algorave-for-the-specific-task-such-as-classification-or-segmentation) including classification, segmentation (semantic & instance), object detection, and pose estimation.
 - **Simple, Unified API**: [One consistent interface](#a-simple-example) for all data types - RGB/grayscale/multispectral images, masks, bounding boxes, and keypoints.
-- **Rich Augmentation Library**: [70+ high-quality augmentations](https://albumentations.ai/docs/reference/supported-targets-by-transform/) to enhance your training data.
-- **Fast**: Consistently benchmarked as the [fastest augmentation library](https://albumentations.ai/docs/benchmarks/image-benchmarks/), with optimizations for production use.
+- **Rich Augmentation Library**: [70+ high-quality augmentations](https://algorave.ai/docs/reference/supported-targets-by-transform/) to enhance your training data.
+- **Fast**: Consistently benchmarked as the [fastest augmentation library](https://algorave.ai/docs/benchmarks/image-benchmarks/), with optimizations for production use.
 - **Deep Learning Integration**: Works with [PyTorch](https://pytorch.org/), [TensorFlow](https://www.tensorflow.org/), and other frameworks. Part of the [PyTorch ecosystem](https://pytorch.org/ecosystem/).
 - **Created by Experts**: Built by [developers with deep experience in computer vision and machine learning competitions](#authors).
 
 ## Table of contents
 
-- [Albumentations](#albumentations)
-  - [Why Albumentations](#why-albumentations)
+- [Albumentations](#algorave)
+  - [Why Albumentations](#why-algorave)
   - [Table of contents](#table-of-contents)
   - [Authors](#authors)
     - [Current Maintainer](#current-maintainer)
@@ -113,9 +113,9 @@ Here is an example of how you can apply some [pixel-level](#pixel-level-transfor
   - [A simple example](#a-simple-example)
   - [Getting started](#getting-started)
     - [I am new to image augmentation](#i-am-new-to-image-augmentation)
-    - [I want to use Albumentations for the specific task such as classification or segmentation](#i-want-to-use-albumentations-for-the-specific-task-such-as-classification-or-segmentation)
-    - [I want to explore augmentations and see Albumentations in action](#i-want-to-explore-augmentations-and-see-albumentations-in-action)
-  - [Who is using Albumentations](#who-is-using-albumentations)
+    - [I want to use Albumentations for the specific task such as classification or segmentation](#i-want-to-use-algorave-for-the-specific-task-such-as-classification-or-segmentation)
+    - [I want to explore augmentations and see Albumentations in action](#i-want-to-explore-augmentations-and-see-algorave-in-action)
+  - [Who is using Albumentations](#who-is-using-algorave)
     - [See also](#see-also)
   - [List of augmentations](#list-of-augmentations)
     - [Pixel-level transforms](#pixel-level-transforms)
@@ -155,19 +155,19 @@ Here is an example of how you can apply some [pixel-level](#pixel-level-transfor
 Albumentations requires Python 3.9 or higher. To install the latest version from PyPI:
 
 ```bash
-pip install -U albumentations
+pip install -U algorave
 ```
 
-Other installation options are described in the [documentation](https://albumentations.ai/docs/1-introduction/installation/).
+Other installation options are described in the [documentation](https://algorave.ai/docs/1-introduction/installation/).
 
 ## Documentation
 
-The full documentation is available at **[https://albumentations.ai/docs/](https://albumentations.ai/docs/)**.
+The full documentation is available at **[https://algorave.ai/docs/](https://algorave.ai/docs/)**.
 
 ## A simple example
 
 ```python
-import albumentations as A
+import algorave as A
 import cv2
 
 # Declare an augmentation pipeline
@@ -190,37 +190,37 @@ transformed_image = transformed["image"]
 
 ### I am new to image augmentation
 
-Please start with the [introduction articles](https://albumentations.ai/docs/#learning-path) about why image augmentation is important and how it helps to build better models.
+Please start with the [introduction articles](https://algorave.ai/docs/#learning-path) about why image augmentation is important and how it helps to build better models.
 
 ### I want to use Albumentations for the specific task such as classification or segmentation
 
-If you want to use Albumentations for a specific task such as classification, segmentation, or object detection, refer to the [set of articles](https://albumentations.ai/docs/1-introduction/what-are-image-augmentations/) that has an in-depth description of this task. We also have a [list of examples](https://albumentations.ai/docs/examples/) on applying Albumentations for different use cases.
+If you want to use Albumentations for a specific task such as classification, segmentation, or object detection, refer to the [set of articles](https://algorave.ai/docs/1-introduction/what-are-image-augmentations/) that has an in-depth description of this task. We also have a [list of examples](https://algorave.ai/docs/examples/) on applying Albumentations for different use cases.
 
 ### I want to explore augmentations and see Albumentations in action
 
-Check the [online demo of the library](https://explore.albumentations.ai/). With it, you can apply augmentations to different images and see the result. Also, we have a [list of all available augmentations and their targets](#list-of-augmentations).
+Check the [online demo of the library](https://explore.algorave.ai/). With it, you can apply augmentations to different images and see the result. Also, we have a [list of all available augmentations and their targets](#list-of-augmentations).
 
 ## Who is using Albumentations
 
-<a href="https://www.apple.com/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/apple.jpeg" width="100"/></a>
-<a href="https://research.google/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/google.png" width="100"/></a>
-<a href="https://opensource.fb.com/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/meta_research.png" width="100"/></a>
-<a href="https://www.nvidia.com/en-us/research/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/nvidia_research.jpeg" width="100"/></a>
-<a href="https://www.amazon.science/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/amazon_science.png" width="100"/></a>
-<a href="https://opensource.microsoft.com/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/microsoft.png" width="100"/></a>
-<a href="https://engineering.salesforce.com/open-source/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/salesforce_open_source.png" width="100"/></a>
-<a href="https://stability.ai/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/stability.png" width="100"/></a>
-<a href="https://www.ibm.com/opensource/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/ibm.jpeg" width="100"/></a>
-<a href="https://huggingface.co/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/hugging_face.png" width="100"/></a>
-<a href="https://www.sony.com/en/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/sony.png" width="100"/></a>
-<a href="https://opensource.alibaba.com/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/alibaba.png" width="100"/></a>
-<a href="https://opensource.tencent.com/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/tencent.png" width="100"/></a>
-<a href="https://h2o.ai/" target="_blank"><img src="https://www.albumentations.ai/assets/industry/h2o_ai.png" width="100"/></a>
+<a href="https://www.apple.com/" target="_blank"><img src="https://www.algorave.ai/assets/industry/apple.jpeg" width="100"/></a>
+<a href="https://research.google/" target="_blank"><img src="https://www.algorave.ai/assets/industry/google.png" width="100"/></a>
+<a href="https://opensource.fb.com/" target="_blank"><img src="https://www.algorave.ai/assets/industry/meta_research.png" width="100"/></a>
+<a href="https://www.nvidia.com/en-us/research/" target="_blank"><img src="https://www.algorave.ai/assets/industry/nvidia_research.jpeg" width="100"/></a>
+<a href="https://www.amazon.science/" target="_blank"><img src="https://www.algorave.ai/assets/industry/amazon_science.png" width="100"/></a>
+<a href="https://opensource.microsoft.com/" target="_blank"><img src="https://www.algorave.ai/assets/industry/microsoft.png" width="100"/></a>
+<a href="https://engineering.salesforce.com/open-source/" target="_blank"><img src="https://www.algorave.ai/assets/industry/salesforce_open_source.png" width="100"/></a>
+<a href="https://stability.ai/" target="_blank"><img src="https://www.algorave.ai/assets/industry/stability.png" width="100"/></a>
+<a href="https://www.ibm.com/opensource/" target="_blank"><img src="https://www.algorave.ai/assets/industry/ibm.jpeg" width="100"/></a>
+<a href="https://huggingface.co/" target="_blank"><img src="https://www.algorave.ai/assets/industry/hugging_face.png" width="100"/></a>
+<a href="https://www.sony.com/en/" target="_blank"><img src="https://www.algorave.ai/assets/industry/sony.png" width="100"/></a>
+<a href="https://opensource.alibaba.com/" target="_blank"><img src="https://www.algorave.ai/assets/industry/alibaba.png" width="100"/></a>
+<a href="https://opensource.tencent.com/" target="_blank"><img src="https://www.algorave.ai/assets/industry/tencent.png" width="100"/></a>
+<a href="https://h2o.ai/" target="_blank"><img src="https://www.algorave.ai/assets/industry/h2o_ai.png" width="100"/></a>
 
 ### See also
 
 - [A list of papers that cite Albumentations](https://scholar.google.com/citations?view_op=view_citation&citation_for_view=vkjh9X0AAAAJ:r0BpntZqJG4C).
-- [Open source projects that use Albumentations](https://github.com/albumentations-team/albumentations/network/dependents?dependent_type=PACKAGE).
+- [Open source projects that use Albumentations](https://github.com/algorave-team/algorave/network/dependents?dependent_type=PACKAGE).
 
 ## List of augmentations
 
@@ -228,65 +228,65 @@ Check the [online demo of the library](https://explore.albumentations.ai/). With
 
 Pixel-level transforms will change just an input image and will leave any additional targets such as masks, bounding boxes, and keypoints unchanged. For volumetric data (volumes and 3D masks), these transforms are applied independently to each slice along the Z-axis (depth dimension), maintaining consistency across the volume. The list of pixel-level transforms:
 
-- [AdditiveNoise](https://explore.albumentations.ai/transform/AdditiveNoise)
-- [AdvancedBlur](https://explore.albumentations.ai/transform/AdvancedBlur)
-- [AutoContrast](https://explore.albumentations.ai/transform/AutoContrast)
-- [Blur](https://explore.albumentations.ai/transform/Blur)
-- [CLAHE](https://explore.albumentations.ai/transform/CLAHE)
-- [ChannelDropout](https://explore.albumentations.ai/transform/ChannelDropout)
-- [ChannelShuffle](https://explore.albumentations.ai/transform/ChannelShuffle)
-- [ChromaticAberration](https://explore.albumentations.ai/transform/ChromaticAberration)
-- [ColorJitter](https://explore.albumentations.ai/transform/ColorJitter)
-- [Defocus](https://explore.albumentations.ai/transform/Defocus)
-- [Downscale](https://explore.albumentations.ai/transform/Downscale)
-- [Emboss](https://explore.albumentations.ai/transform/Emboss)
-- [Equalize](https://explore.albumentations.ai/transform/Equalize)
-- [FDA](https://explore.albumentations.ai/transform/FDA)
-- [FancyPCA](https://explore.albumentations.ai/transform/FancyPCA)
-- [FromFloat](https://explore.albumentations.ai/transform/FromFloat)
-- [GaussNoise](https://explore.albumentations.ai/transform/GaussNoise)
-- [GaussianBlur](https://explore.albumentations.ai/transform/GaussianBlur)
-- [GlassBlur](https://explore.albumentations.ai/transform/GlassBlur)
-- [HEStain](https://explore.albumentations.ai/transform/HEStain)
-- [HistogramMatching](https://explore.albumentations.ai/transform/HistogramMatching)
-- [HueSaturationValue](https://explore.albumentations.ai/transform/HueSaturationValue)
-- [ISONoise](https://explore.albumentations.ai/transform/ISONoise)
-- [Illumination](https://explore.albumentations.ai/transform/Illumination)
-- [ImageCompression](https://explore.albumentations.ai/transform/ImageCompression)
-- [InvertImg](https://explore.albumentations.ai/transform/InvertImg)
-- [MedianBlur](https://explore.albumentations.ai/transform/MedianBlur)
-- [MotionBlur](https://explore.albumentations.ai/transform/MotionBlur)
-- [MultiplicativeNoise](https://explore.albumentations.ai/transform/MultiplicativeNoise)
-- [Normalize](https://explore.albumentations.ai/transform/Normalize)
-- [PixelDistributionAdaptation](https://explore.albumentations.ai/transform/PixelDistributionAdaptation)
-- [PlanckianJitter](https://explore.albumentations.ai/transform/PlanckianJitter)
-- [PlasmaBrightnessContrast](https://explore.albumentations.ai/transform/PlasmaBrightnessContrast)
-- [PlasmaShadow](https://explore.albumentations.ai/transform/PlasmaShadow)
-- [Posterize](https://explore.albumentations.ai/transform/Posterize)
-- [RGBShift](https://explore.albumentations.ai/transform/RGBShift)
-- [RandomBrightnessContrast](https://explore.albumentations.ai/transform/RandomBrightnessContrast)
-- [RandomFog](https://explore.albumentations.ai/transform/RandomFog)
-- [RandomGamma](https://explore.albumentations.ai/transform/RandomGamma)
-- [RandomGravel](https://explore.albumentations.ai/transform/RandomGravel)
-- [RandomRain](https://explore.albumentations.ai/transform/RandomRain)
-- [RandomShadow](https://explore.albumentations.ai/transform/RandomShadow)
-- [RandomSnow](https://explore.albumentations.ai/transform/RandomSnow)
-- [RandomSunFlare](https://explore.albumentations.ai/transform/RandomSunFlare)
-- [RandomToneCurve](https://explore.albumentations.ai/transform/RandomToneCurve)
-- [RingingOvershoot](https://explore.albumentations.ai/transform/RingingOvershoot)
-- [SaltAndPepper](https://explore.albumentations.ai/transform/SaltAndPepper)
-- [Sharpen](https://explore.albumentations.ai/transform/Sharpen)
-- [ShotNoise](https://explore.albumentations.ai/transform/ShotNoise)
-- [Solarize](https://explore.albumentations.ai/transform/Solarize)
-- [Spatter](https://explore.albumentations.ai/transform/Spatter)
-- [Superpixels](https://explore.albumentations.ai/transform/Superpixels)
-- [TextImage](https://explore.albumentations.ai/transform/TextImage)
-- [ToFloat](https://explore.albumentations.ai/transform/ToFloat)
-- [ToGray](https://explore.albumentations.ai/transform/ToGray)
-- [ToRGB](https://explore.albumentations.ai/transform/ToRGB)
-- [ToSepia](https://explore.albumentations.ai/transform/ToSepia)
-- [UnsharpMask](https://explore.albumentations.ai/transform/UnsharpMask)
-- [ZoomBlur](https://explore.albumentations.ai/transform/ZoomBlur)
+- [AdditiveNoise](https://explore.algorave.ai/transform/AdditiveNoise)
+- [AdvancedBlur](https://explore.algorave.ai/transform/AdvancedBlur)
+- [AutoContrast](https://explore.algorave.ai/transform/AutoContrast)
+- [Blur](https://explore.algorave.ai/transform/Blur)
+- [CLAHE](https://explore.algorave.ai/transform/CLAHE)
+- [ChannelDropout](https://explore.algorave.ai/transform/ChannelDropout)
+- [ChannelShuffle](https://explore.algorave.ai/transform/ChannelShuffle)
+- [ChromaticAberration](https://explore.algorave.ai/transform/ChromaticAberration)
+- [ColorJitter](https://explore.algorave.ai/transform/ColorJitter)
+- [Defocus](https://explore.algorave.ai/transform/Defocus)
+- [Downscale](https://explore.algorave.ai/transform/Downscale)
+- [Emboss](https://explore.algorave.ai/transform/Emboss)
+- [Equalize](https://explore.algorave.ai/transform/Equalize)
+- [FDA](https://explore.algorave.ai/transform/FDA)
+- [FancyPCA](https://explore.algorave.ai/transform/FancyPCA)
+- [FromFloat](https://explore.algorave.ai/transform/FromFloat)
+- [GaussNoise](https://explore.algorave.ai/transform/GaussNoise)
+- [GaussianBlur](https://explore.algorave.ai/transform/GaussianBlur)
+- [GlassBlur](https://explore.algorave.ai/transform/GlassBlur)
+- [HEStain](https://explore.algorave.ai/transform/HEStain)
+- [HistogramMatching](https://explore.algorave.ai/transform/HistogramMatching)
+- [HueSaturationValue](https://explore.algorave.ai/transform/HueSaturationValue)
+- [ISONoise](https://explore.algorave.ai/transform/ISONoise)
+- [Illumination](https://explore.algorave.ai/transform/Illumination)
+- [ImageCompression](https://explore.algorave.ai/transform/ImageCompression)
+- [InvertImg](https://explore.algorave.ai/transform/InvertImg)
+- [MedianBlur](https://explore.algorave.ai/transform/MedianBlur)
+- [MotionBlur](https://explore.algorave.ai/transform/MotionBlur)
+- [MultiplicativeNoise](https://explore.algorave.ai/transform/MultiplicativeNoise)
+- [Normalize](https://explore.algorave.ai/transform/Normalize)
+- [PixelDistributionAdaptation](https://explore.algorave.ai/transform/PixelDistributionAdaptation)
+- [PlanckianJitter](https://explore.algorave.ai/transform/PlanckianJitter)
+- [PlasmaBrightnessContrast](https://explore.algorave.ai/transform/PlasmaBrightnessContrast)
+- [PlasmaShadow](https://explore.algorave.ai/transform/PlasmaShadow)
+- [Posterize](https://explore.algorave.ai/transform/Posterize)
+- [RGBShift](https://explore.algorave.ai/transform/RGBShift)
+- [RandomBrightnessContrast](https://explore.algorave.ai/transform/RandomBrightnessContrast)
+- [RandomFog](https://explore.algorave.ai/transform/RandomFog)
+- [RandomGamma](https://explore.algorave.ai/transform/RandomGamma)
+- [RandomGravel](https://explore.algorave.ai/transform/RandomGravel)
+- [RandomRain](https://explore.algorave.ai/transform/RandomRain)
+- [RandomShadow](https://explore.algorave.ai/transform/RandomShadow)
+- [RandomSnow](https://explore.algorave.ai/transform/RandomSnow)
+- [RandomSunFlare](https://explore.algorave.ai/transform/RandomSunFlare)
+- [RandomToneCurve](https://explore.algorave.ai/transform/RandomToneCurve)
+- [RingingOvershoot](https://explore.algorave.ai/transform/RingingOvershoot)
+- [SaltAndPepper](https://explore.algorave.ai/transform/SaltAndPepper)
+- [Sharpen](https://explore.algorave.ai/transform/Sharpen)
+- [ShotNoise](https://explore.algorave.ai/transform/ShotNoise)
+- [Solarize](https://explore.algorave.ai/transform/Solarize)
+- [Spatter](https://explore.algorave.ai/transform/Spatter)
+- [Superpixels](https://explore.algorave.ai/transform/Superpixels)
+- [TextImage](https://explore.algorave.ai/transform/TextImage)
+- [ToFloat](https://explore.algorave.ai/transform/ToFloat)
+- [ToGray](https://explore.algorave.ai/transform/ToGray)
+- [ToRGB](https://explore.algorave.ai/transform/ToRGB)
+- [ToSepia](https://explore.algorave.ai/transform/ToSepia)
+- [UnsharpMask](https://explore.algorave.ai/transform/UnsharpMask)
+- [ZoomBlur](https://explore.algorave.ai/transform/ZoomBlur)
 
 ### Spatial-level transforms
 
@@ -297,57 +297,57 @@ Spatial-level transforms will simultaneously change both an input image as well 
 
 | Transform                                                                                        | Image | Mask | BBoxes | Keypoints | Volume | Mask3D |
 | ------------------------------------------------------------------------------------------------ | :---: | :--: | :----: | :-------: | :----: | :----: |
-| [Affine](https://explore.albumentations.ai/transform/Affine)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [AtLeastOneBBoxRandomCrop](https://explore.albumentations.ai/transform/AtLeastOneBBoxRandomCrop) | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [BBoxSafeRandomCrop](https://explore.albumentations.ai/transform/BBoxSafeRandomCrop)             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [CenterCrop](https://explore.albumentations.ai/transform/CenterCrop)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [CoarseDropout](https://explore.albumentations.ai/transform/CoarseDropout)                       | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [ConstrainedCoarseDropout](https://explore.albumentations.ai/transform/ConstrainedCoarseDropout) | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Crop](https://explore.albumentations.ai/transform/Crop)                                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [CropAndPad](https://explore.albumentations.ai/transform/CropAndPad)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [CropNonEmptyMaskIfExists](https://explore.albumentations.ai/transform/CropNonEmptyMaskIfExists) | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [D4](https://explore.albumentations.ai/transform/D4)                                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [ElasticTransform](https://explore.albumentations.ai/transform/ElasticTransform)                 | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Erasing](https://explore.albumentations.ai/transform/Erasing)                                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [FrequencyMasking](https://explore.albumentations.ai/transform/FrequencyMasking)                 | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [GridDistortion](https://explore.albumentations.ai/transform/GridDistortion)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [GridDropout](https://explore.albumentations.ai/transform/GridDropout)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [GridElasticDeform](https://explore.albumentations.ai/transform/GridElasticDeform)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [HorizontalFlip](https://explore.albumentations.ai/transform/HorizontalFlip)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Lambda](https://explore.albumentations.ai/transform/Lambda)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [LongestMaxSize](https://explore.albumentations.ai/transform/LongestMaxSize)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [MaskDropout](https://explore.albumentations.ai/transform/MaskDropout)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Morphological](https://explore.albumentations.ai/transform/Morphological)                       | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Mosaic](https://explore.albumentations.ai/transform/Mosaic)                                     | ✓     | ✓    | ✓      | ✓         |        |        |
-| [NoOp](https://explore.albumentations.ai/transform/NoOp)                                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [OpticalDistortion](https://explore.albumentations.ai/transform/OpticalDistortion)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [OverlayElements](https://explore.albumentations.ai/transform/OverlayElements)                   | ✓     | ✓    |        |           |        |        |
-| [Pad](https://explore.albumentations.ai/transform/Pad)                                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [PadIfNeeded](https://explore.albumentations.ai/transform/PadIfNeeded)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Perspective](https://explore.albumentations.ai/transform/Perspective)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [PiecewiseAffine](https://explore.albumentations.ai/transform/PiecewiseAffine)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [PixelDropout](https://explore.albumentations.ai/transform/PixelDropout)                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomCrop](https://explore.albumentations.ai/transform/RandomCrop)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomCropFromBorders](https://explore.albumentations.ai/transform/RandomCropFromBorders)       | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomCropNearBBox](https://explore.albumentations.ai/transform/RandomCropNearBBox)             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomGridShuffle](https://explore.albumentations.ai/transform/RandomGridShuffle)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomResizedCrop](https://explore.albumentations.ai/transform/RandomResizedCrop)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomRotate90](https://explore.albumentations.ai/transform/RandomRotate90)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomScale](https://explore.albumentations.ai/transform/RandomScale)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomSizedBBoxSafeCrop](https://explore.albumentations.ai/transform/RandomSizedBBoxSafeCrop)   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [RandomSizedCrop](https://explore.albumentations.ai/transform/RandomSizedCrop)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Resize](https://explore.albumentations.ai/transform/Resize)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Rotate](https://explore.albumentations.ai/transform/Rotate)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [SafeRotate](https://explore.albumentations.ai/transform/SafeRotate)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [ShiftScaleRotate](https://explore.albumentations.ai/transform/ShiftScaleRotate)                 | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [SmallestMaxSize](https://explore.albumentations.ai/transform/SmallestMaxSize)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [SquareSymmetry](https://explore.albumentations.ai/transform/SquareSymmetry)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [ThinPlateSpline](https://explore.albumentations.ai/transform/ThinPlateSpline)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [TimeMasking](https://explore.albumentations.ai/transform/TimeMasking)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [TimeReverse](https://explore.albumentations.ai/transform/TimeReverse)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [Transpose](https://explore.albumentations.ai/transform/Transpose)                               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [VerticalFlip](https://explore.albumentations.ai/transform/VerticalFlip)                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
-| [XYMasking](https://explore.albumentations.ai/transform/XYMasking)                               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Affine](https://explore.algorave.ai/transform/Affine)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [AtLeastOneBBoxRandomCrop](https://explore.algorave.ai/transform/AtLeastOneBBoxRandomCrop) | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [BBoxSafeRandomCrop](https://explore.algorave.ai/transform/BBoxSafeRandomCrop)             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [CenterCrop](https://explore.algorave.ai/transform/CenterCrop)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [CoarseDropout](https://explore.algorave.ai/transform/CoarseDropout)                       | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [ConstrainedCoarseDropout](https://explore.algorave.ai/transform/ConstrainedCoarseDropout) | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Crop](https://explore.algorave.ai/transform/Crop)                                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [CropAndPad](https://explore.algorave.ai/transform/CropAndPad)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [CropNonEmptyMaskIfExists](https://explore.algorave.ai/transform/CropNonEmptyMaskIfExists) | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [D4](https://explore.algorave.ai/transform/D4)                                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [ElasticTransform](https://explore.algorave.ai/transform/ElasticTransform)                 | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Erasing](https://explore.algorave.ai/transform/Erasing)                                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [FrequencyMasking](https://explore.algorave.ai/transform/FrequencyMasking)                 | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [GridDistortion](https://explore.algorave.ai/transform/GridDistortion)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [GridDropout](https://explore.algorave.ai/transform/GridDropout)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [GridElasticDeform](https://explore.algorave.ai/transform/GridElasticDeform)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [HorizontalFlip](https://explore.algorave.ai/transform/HorizontalFlip)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Lambda](https://explore.algorave.ai/transform/Lambda)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [LongestMaxSize](https://explore.algorave.ai/transform/LongestMaxSize)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [MaskDropout](https://explore.algorave.ai/transform/MaskDropout)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Morphological](https://explore.algorave.ai/transform/Morphological)                       | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Mosaic](https://explore.algorave.ai/transform/Mosaic)                                     | ✓     | ✓    | ✓      | ✓         |        |        |
+| [NoOp](https://explore.algorave.ai/transform/NoOp)                                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [OpticalDistortion](https://explore.algorave.ai/transform/OpticalDistortion)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [OverlayElements](https://explore.algorave.ai/transform/OverlayElements)                   | ✓     | ✓    |        |           |        |        |
+| [Pad](https://explore.algorave.ai/transform/Pad)                                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [PadIfNeeded](https://explore.algorave.ai/transform/PadIfNeeded)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Perspective](https://explore.algorave.ai/transform/Perspective)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [PiecewiseAffine](https://explore.algorave.ai/transform/PiecewiseAffine)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [PixelDropout](https://explore.algorave.ai/transform/PixelDropout)                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomCrop](https://explore.algorave.ai/transform/RandomCrop)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomCropFromBorders](https://explore.algorave.ai/transform/RandomCropFromBorders)       | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomCropNearBBox](https://explore.algorave.ai/transform/RandomCropNearBBox)             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomGridShuffle](https://explore.algorave.ai/transform/RandomGridShuffle)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomResizedCrop](https://explore.algorave.ai/transform/RandomResizedCrop)               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomRotate90](https://explore.algorave.ai/transform/RandomRotate90)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomScale](https://explore.algorave.ai/transform/RandomScale)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomSizedBBoxSafeCrop](https://explore.algorave.ai/transform/RandomSizedBBoxSafeCrop)   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [RandomSizedCrop](https://explore.algorave.ai/transform/RandomSizedCrop)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Resize](https://explore.algorave.ai/transform/Resize)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Rotate](https://explore.algorave.ai/transform/Rotate)                                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [SafeRotate](https://explore.algorave.ai/transform/SafeRotate)                             | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [ShiftScaleRotate](https://explore.algorave.ai/transform/ShiftScaleRotate)                 | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [SmallestMaxSize](https://explore.algorave.ai/transform/SmallestMaxSize)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [SquareSymmetry](https://explore.algorave.ai/transform/SquareSymmetry)                     | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [ThinPlateSpline](https://explore.algorave.ai/transform/ThinPlateSpline)                   | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [TimeMasking](https://explore.algorave.ai/transform/TimeMasking)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [TimeReverse](https://explore.algorave.ai/transform/TimeReverse)                           | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [Transpose](https://explore.algorave.ai/transform/Transpose)                               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [VerticalFlip](https://explore.algorave.ai/transform/VerticalFlip)                         | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
+| [XYMasking](https://explore.algorave.ai/transform/XYMasking)                               | ✓     | ✓    | ✓      | ✓         | ✓      | ✓      |
 
 ### 3D transforms
 
@@ -360,12 +360,12 @@ Where:
 
 | Transform                                                                      | Volume | Mask3D | Keypoints |
 | ------------------------------------------------------------------------------ | :----: | :----: | :-------: |
-| [CenterCrop3D](https://explore.albumentations.ai/transform/CenterCrop3D)       | ✓      | ✓      | ✓         |
-| [CoarseDropout3D](https://explore.albumentations.ai/transform/CoarseDropout3D) | ✓      | ✓      | ✓         |
-| [CubicSymmetry](https://explore.albumentations.ai/transform/CubicSymmetry)     | ✓      | ✓      | ✓         |
-| [Pad3D](https://explore.albumentations.ai/transform/Pad3D)                     | ✓      | ✓      | ✓         |
-| [PadIfNeeded3D](https://explore.albumentations.ai/transform/PadIfNeeded3D)     | ✓      | ✓      | ✓         |
-| [RandomCrop3D](https://explore.albumentations.ai/transform/RandomCrop3D)       | ✓      | ✓      | ✓         |
+| [CenterCrop3D](https://explore.algorave.ai/transform/CenterCrop3D)       | ✓      | ✓      | ✓         |
+| [CoarseDropout3D](https://explore.algorave.ai/transform/CoarseDropout3D) | ✓      | ✓      | ✓         |
+| [CubicSymmetry](https://explore.algorave.ai/transform/CubicSymmetry)     | ✓      | ✓      | ✓         |
+| [Pad3D](https://explore.algorave.ai/transform/Pad3D)                     | ✓      | ✓      | ✓         |
+| [PadIfNeeded3D](https://explore.algorave.ai/transform/PadIfNeeded3D)     | ✓      | ✓      | ✓         |
+| [RandomCrop3D](https://explore.algorave.ai/transform/RandomCrop3D)       | ✓      | ✓      | ✓         |
 
 ## A few more examples of **augmentations**
 
@@ -404,7 +404,7 @@ Where:
 
 ### Library Versions
 
-- albumentations: 2.0.4
+- algorave: 2.0.4
 - augly: 1.0.0
 - imgaug: 0.4.0
 - kornia: 0.8.0
@@ -416,7 +416,7 @@ Number shows how many uint8 images per second can be processed on one CPU thread
 The Speedup column shows how many times faster Albumentations is compared to the fastest other
 library for each transform.
 
-| Transform            | albumentations<br>2.0.4   | augly<br>1.0.0   | imgaug<br>0.4.0   | kornia<br>0.8.0   | torchvision<br>0.20.1   | Speedup<br>(Alb/fastest other)   |
+| Transform            | algorave<br>2.0.4   | augly<br>1.0.0   | imgaug<br>0.4.0   | kornia<br>0.8.0   | torchvision<br>0.20.1   | Speedup<br>(Alb/fastest other)   |
 |:---------------------|:--------------------------|:-----------------|:------------------|:------------------|:------------------------|:---------------------------------|
 | Affine               | **1445 ± 9**              | -                | 1328 ± 16         | 248 ± 6           | 188 ± 2                 | 1.09x                            |
 | AutoContrast         | **1657 ± 13**             | -                | -                 | 541 ± 8           | 344 ± 1                 | 3.06x                            |
@@ -474,12 +474,12 @@ library for each transform.
 
 To create a pull request to the repository, follow the documentation at [CONTRIBUTING.md](CONTRIBUTING.md)
 
-![https://github.com/albuemntations-team/albumentation/graphs/contributors](https://contrib.rocks/image?repo=albumentations-team/albumentations)
+![https://github.com/albuemntations-team/albumentation/graphs/contributors](https://contrib.rocks/image?repo=algorave-team/algorave)
 
 ## Community
 
-- [LinkedIn](https://www.linkedin.com/company/albumentations/)
-- [Twitter](https://twitter.com/albumentations)
+- [LinkedIn](https://www.linkedin.com/company/algorave/)
+- [Twitter](https://twitter.com/algorave)
 - [Discord](https://discord.gg/AKPrrDYNAt)
 
 ## Citing
@@ -505,6 +505,6 @@ If you find this library useful for your research, please consider citing [Album
 
 ## 📫 Stay Connected
 
-Never miss updates, tutorials, and tips from the Albumentations team! [Subscribe to our newsletter](https://albumentations.ai/subscribe).
+Never miss updates, tutorials, and tips from the Albumentations team! [Subscribe to our newsletter](https://algorave.ai/subscribe).
 
 <!-- GitAds-Verify: ERJY18YZIFA1WZ6CUJNP379R3T3JN418 -->

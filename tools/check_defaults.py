@@ -3,8 +3,8 @@ from __future__ import annotations
 import inspect
 import sys
 
-import albumentations
-from albumentations.core.transforms_interface import BasicTransform
+import algorave
+from algorave.core.transforms_interface import BasicTransform
 
 
 def check_apply_methods(cls):
@@ -29,8 +29,8 @@ def is_subclass_of_basic_transform(cls):
 
 def main():
     issues = []
-    # Check all classes in the albumentations module
-    for _name, cls in inspect.getmembers(albumentations, predicate=inspect.isclass):
+    # Check all classes in the algorave module
+    for _name, cls in inspect.getmembers(algorave, predicate=inspect.isclass):
         if is_subclass_of_basic_transform(cls):
             issues.extend(check_apply_methods(cls))
 

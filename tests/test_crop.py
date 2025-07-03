@@ -2,8 +2,8 @@ from typing import Literal
 import numpy as np
 import pytest
 
-import albumentations as A
-from albumentations.augmentations.crops.functional import crop_bboxes_by_coords
+import algorave as A
+from algorave.augmentations.crops.functional import crop_bboxes_by_coords
 
 import cv2
 

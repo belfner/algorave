@@ -4,7 +4,7 @@ import random
 from albucore import get_num_channels
 from PIL import Image, ImageFont
 
-import albumentations.augmentations.text.functional as ftext
+import algorave.augmentations.text.functional as ftext
 
 
 @pytest.mark.parametrize(

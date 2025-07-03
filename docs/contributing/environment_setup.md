@@ -12,12 +12,12 @@ This guide will help you set up your development environment for contributing to
 
 ### 1. Fork and Clone the Repository
 
-1. Fork the [Albumentations repository](https://github.com/albumentations-team/albumentations) on GitHub
+1. Fork the [Albumentations repository](https://github.com/algorave-team/algorave) on GitHub
 2. Clone your fork locally:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/albumentations.git
-cd albumentations
+git clone https://github.com/YOUR_USERNAME/algorave.git
+cd algorave
 ```
 
 ### 2. Create a Virtual Environment
@@ -78,7 +78,7 @@ pre-commit install
 1. (Optional) Run hooks manually on all files:
 
 ```bash
-pre-commit run --files $(find albumentations -type f)
+pre-commit run --files $(find algorave -type f)
 ```
 
 ## Verifying Your Setup
@@ -126,5 +126,5 @@ For more detailed information about contributing, please refer to [Coding Guidel
 If you encounter any issues with the setup:
 
 1. Check our [Discord community](https://discord.gg/e6zHCXTvaN)
-2. Open an [issue on GitHub](https://github.com/albumentations-team/albumentations/issues)
+2. Open an [issue on GitHub](https://github.com/algorave-team/algorave/issues)
 3. Review existing issues for similar problems and solutions

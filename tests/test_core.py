@@ -10,9 +10,9 @@ import numpy as np
 import pytest
 from typing import Any
 
-import albumentations as A
-from albumentations.core.bbox_utils import check_bboxes
-from albumentations.core.composition import (
+import algorave as A
+from algorave.core.bbox_utils import check_bboxes
+from algorave.core.composition import (
     BaseCompose,
     BboxParams,
     Compose,
@@ -24,8 +24,8 @@ from albumentations.core.composition import (
     Sequential,
     SomeOf,
 )
-from albumentations.core.transforms_interface import DualTransform, ImageOnlyTransform, NoOp
-from albumentations.core.utils import to_tuple, get_shape
+from algorave.core.transforms_interface import DualTransform, ImageOnlyTransform, NoOp
+from algorave.core.utils import to_tuple, get_shape
 from tests.conftest import (
     IMAGES,
     SQUARE_UINT8_IMAGE,
@@ -1905,7 +1905,7 @@ def test_affine_invalid_parameters(params, strict, expected_outcome, expected_er
     [
         ("coco", [[15, 12, 30, 40], [50, 50, 15, 40]]),
         ("pascal_voc", [[15, 12, 45, 52], [50, 50, 65, 90]]),
-        ("albumentations", [[0.15, 0.12, 0.45, 0.52], [0.5, 0.5, 0.65, 0.9]]),
+        ("algorave", [[0.15, 0.12, 0.45, 0.52], [0.5, 0.5, 0.65, 0.9]]),
         ("yolo", [[(15 + 30 / 2) / 100, (12 + 40 / 2) / 100, 30 / 100, 40 / 100],
                   [(50 + 15 / 2) / 100, (50 + 40 / 2) / 100, 15 / 100, 40 / 100]]),
     ],

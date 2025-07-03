@@ -1,6 +1,6 @@
 # Contributing to Albumentations
 
-Thank you for your interest in contributing to [Albumentations](https://albumentations.ai/)! This guide will help you get started with contributing to our image augmentation library.
+Thank you for your interest in contributing to [Albumentations](https://algorave.ai/)! This guide will help you get started with contributing to our image augmentation library.
 
 ## Quick Start
 
@@ -8,7 +8,7 @@ For small changes (e.g., bug fixes), feel free to submit a PR directly.
 
 For larger changes:
 
-1. Create an [issue](https://github.com/albumentations-team/albumentations/issues) outlining your proposed change
+1. Create an [issue](https://github.com/algorave-team/algorave/issues) outlining your proposed change
 2. Join our [Discord community](https://discord.gg/e6zHCXTvaN) to discuss your idea
 
 ## Contribution Guides
@@ -35,14 +35,14 @@ We've organized our contribution guidelines into focused documents:
 
 ## Project Structure
 
-- `albumentations/` - Main source code
+- `algorave/` - Main source code
 - `tests/` - Test suite
 - `docs/` - Documentation
 
 ## Getting Help
 
 - Join our [Discord community](https://discord.gg/e6zHCXTvaN)
-- Open a GitHub [issue](https://github.com/albumentations-team/albumentations/issues)
+- Open a GitHub [issue](https://github.com/algorave-team/algorave/issues)
 - Ask questions in your pull request
 
 ## License

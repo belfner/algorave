@@ -5,8 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-import albumentations as A
-from albumentations.core.composition import BboxParams, KeypointParams
+import algorave as A
+from algorave.core.composition import BboxParams, KeypointParams
 
 
 # Sample data fixtures

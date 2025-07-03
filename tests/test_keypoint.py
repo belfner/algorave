@@ -7,17 +7,17 @@ import numpy as np
 import pytest
 import cv2
 
-import albumentations as A
-import albumentations.augmentations.geometric.functional as fgeometric
-from albumentations.augmentations.utils import angle_2pi_range
-from albumentations.core.keypoints_utils import (
+import algorave as A
+import algorave.augmentations.geometric.functional as fgeometric
+from algorave.augmentations.utils import angle_2pi_range
+from algorave.core.keypoints_utils import (
     angle_to_2pi_range,
     check_keypoints,
     convert_keypoints_from_albumentations,
     convert_keypoints_to_albumentations,
     filter_keypoints,
 )
-from albumentations.core.transforms_interface import BasicTransform
+from algorave.core.transforms_interface import BasicTransform
 from tests.conftest import RECTANGULAR_UINT8_IMAGE
 
 
@@ -418,15 +418,15 @@ def test_convert_keypoints_from_albumentations_invalid_format():
     ],
 )
 def test_keypoint_conversion_roundtrip(keypoints, source_format, image_shape):
-    # original => to_albumentations => from_albumentations
-    albumentations_format = convert_keypoints_to_albumentations(keypoints, source_format, image_shape)
-    result = convert_keypoints_from_albumentations(albumentations_format, source_format, image_shape)
+    # original => to_algorave => from_algorave
+    algorave_format = convert_keypoints_to_albumentations(keypoints, source_format, image_shape)
+    result = convert_keypoints_from_albumentations(algorave_format, source_format, image_shape)
     np.testing.assert_allclose(result, keypoints, rtol=1e-5, atol=1e-8)
 
-    # albumentations => from_albumentations => to_albumentations
-    other_format = convert_keypoints_from_albumentations(albumentations_format, source_format, image_shape)
+    # algorave => from_algorave => to_algorave
+    other_format = convert_keypoints_from_albumentations(algorave_format, source_format, image_shape)
     result = convert_keypoints_to_albumentations(other_format, source_format, image_shape)
-    np.testing.assert_allclose(result, albumentations_format, rtol=1e-5, atol=1e-8)
+    np.testing.assert_allclose(result, algorave_format, rtol=1e-5, atol=1e-8)
 
 
 @pytest.mark.parametrize(

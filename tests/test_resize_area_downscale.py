@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import pytest
 
-import albumentations as A
+import algorave as A
 
 
 def get_downscale_image():

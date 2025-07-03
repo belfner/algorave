@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from collections.abc import Sequence
 
-from albumentations.core.label_manager import LabelEncoder, LabelManager
+from algorave.core.label_manager import LabelEncoder, LabelManager
 
 
 @pytest.mark.parametrize(

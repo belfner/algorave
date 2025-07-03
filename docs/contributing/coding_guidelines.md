@@ -34,7 +34,7 @@ We use pre-commit hooks to maintain consistent code quality. These hooks automat
 - The hooks will run automatically on `git commit`. To run manually:
 
   ```bash
-  pre-commit run --files $(find albumentations -type f)
+  pre-commit run --files $(find algorave -type f)
   ```
 
 ### Python Version and Type Hints
@@ -433,7 +433,7 @@ The center point calculation differs slightly between targets:
 
   ```python
   # Correct - using helper function
-  from albumentations.augmentations.geometric.functional import center
+  from algorave.augmentations.geometric.functional import center
   center_x, center_y = center(image_shape)  # Returns ((width-1)/2, (height-1)/2)
 
   # Incorrect - manual calculation might miss the -1
@@ -445,7 +445,7 @@ The center point calculation differs slightly between targets:
 
   ```python
   # Correct - using helper function
-  from albumentations.augmentations.geometric.functional import center_bbox
+  from algorave.augmentations.geometric.functional import center_bbox
   center_x, center_y = center_bbox(image_shape)  # Returns (width/2, height/2)
 
   # Incorrect - using wrong center calculation
@@ -517,7 +517,7 @@ Here's an example for a `DualTransform`:
 """
 Examples:
     >>> import numpy as np
-    >>> import albumentations as A
+    >>> import algorave as A
     >>> # Prepare sample data
     >>> image = np.random.randint(0, 256, (100, 100, 3), dtype=np.uint8)
     >>> mask = np.random.randint(0, 2, (100, 100), dtype=np.uint8)
@@ -557,7 +557,7 @@ Examples for a base class showing custom implementation:
 Examples:
     # Example of a custom distortion subclass
     >>> import numpy as np
-    >>> import albumentations as A
+    >>> import algorave as A
     >>>
     >>> class CustomDistortion(A.BaseDistortion):
     ...     def __init__(self, *args, **kwargs):
@@ -663,5 +663,5 @@ Before submitting your PR:
 If you have questions about these guidelines:
 
 1. Join our [Discord community](https://discord.gg/e6zHCXTvaN)
-2. Open a GitHub [issue](https://github.com/albumentations-team/albumentations/issues)
-3. Ask in your [pull request](https://github.com/albumentations-team/albumentations/pulls)
+2. Open a GitHub [issue](https://github.com/algorave-team/algorave/issues)
+3. Ask in your [pull request](https://github.com/algorave-team/algorave/pulls)

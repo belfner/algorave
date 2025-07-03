@@ -7,10 +7,10 @@ import pytest
 from PIL import Image, ImageFilter
 import cv2
 
-import albumentations as A
-from albumentations.augmentations.blur import functional as fblur
+import algorave as A
+from algorave.augmentations.blur import functional as fblur
 
-from albumentations.core.transforms_interface import BasicTransform
+from algorave.core.transforms_interface import BasicTransform
 from tests.conftest import UINT8_IMAGES
 
 

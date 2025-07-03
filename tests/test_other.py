@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from albucore.utils import get_max_value
 
-from albumentations.augmentations import FromFloat, ToFloat
+from algorave.augmentations import FromFloat, ToFloat
 
 
 @pytest.mark.parametrize("dtype", ["uint8", "uint16", "float32", "float64"])

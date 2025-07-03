@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 requires = [ "setuptools>=45", "wheel" ]
 
 [project]
-name = "albumentations"
+name = "algorave"
 
 version = "2.0.8"
 
-description = "Fast, flexible, and advanced augmentation library for deep learning, computer vision, and medical imaging. Albumentations offers a wide range of transformations for both 2D (images, masks, bboxes, keypoints) and 3D (volumes, volumetric masks, keypoints) data, with optimized performance and seamless integration into ML workflows."
+description = "Fast, flexible, and advanced augmentation library for deep learning, computer vision, and medical imaging. Algorave offers a wide range of transformations for both 2D (images, masks, bboxes, keypoints) and 3D (volumes, volumetric masks, keypoints) data, with optimized performance and seamless integration into ML workflows."
 readme = "README.md"
 keywords = [
   "2D augmentation",
@@ -129,11 +129,11 @@ optional-dependencies.hub = [ "huggingface-hub" ]
 optional-dependencies.pytorch = [ "torch" ]
 
 optional-dependencies.text = [ "pillow" ]
-urls.Homepage = "https://albumentations.ai"
+urls.Homepage = "https://algorave.ai"
 
 [tool.setuptools]
 packages = { find = { include = [
-  "albumentations*",
+  "algorave*",
 ], exclude = [
   "tests",
   "tools",
@@ -143,7 +143,7 @@ packages = { find = { include = [
   ".cursor",
 ] } }
 
-package-data = { albumentations = [ "*.txt", "*.md" ] }
+package-data = { algorave = [ "*.txt", "*.md" ] }
 
 [tool.setuptools.exclude-package-data]
 "*" = [ "tests*", "tools*", "benchmark*", "conda.recipe*", "docs*", ".github*", ".cursor" ]
@@ -272,7 +272,7 @@ lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 lint.pydocstyle.convention = "google"
 lint.pydocstyle.ignore-magic-methods = true
 
-[tool.albumentations.maintainers]
+[tool.algorave.maintainers]
 emeritus = [
   "Alexander Buslaev",
   "Alex Parinov",
@@ -287,14 +287,14 @@ warn_required_dynamic_aliases = true
 
 [tool.codeflash]
 # All paths are relative to this pyproject.toml's directory.
-module-root = "albumentations"
+module-root = "algorave"
 tests-root = "tests"
 test-framework = "pytest"
 ignore-paths = [  ]
 formatter-cmds = [ "ruff check --exit-zero --fix $file", "ruff format $file" ]
 
 [tool.google_docstring_parser]
-paths = [ "albumentations", "tools" ] # Directories or files to scan
+paths = [ "algorave", "tools" ] # Directories or files to scan
 require_param_types = true            # Require parameter types in docstrings
 exclude_files = [ "__init__.py" ]     # Files to exclude from checks
 verbose = false                       # Enable verbose output

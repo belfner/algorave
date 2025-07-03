@@ -4,7 +4,7 @@ import torch
 from PIL import Image
 from torchvision.transforms import ColorJitter
 
-import albumentations as A
+import algorave as A
 from tests.conftest import RECTANGULAR_UINT8_IMAGE, SQUARE_UINT8_IMAGE, UINT8_IMAGES
 
 

@@ -1,6 +1,6 @@
 import pytest
 import warnings
-import albumentations as A
+import algorave as A
 
 
 def test_from_dict_without_p_uses_correct_defaults():

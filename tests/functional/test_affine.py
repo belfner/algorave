@@ -6,9 +6,9 @@ import cv2
 import numpy as np
 import pytest
 
-import albumentations as A
-import albumentations.augmentations.geometric.functional as fgeometric
-from albumentations.core.bbox_utils import denormalize_bboxes, normalize_bboxes
+import algorave as A
+import algorave.augmentations.geometric.functional as fgeometric
+from algorave.core.bbox_utils import denormalize_bboxes, normalize_bboxes
 from tests.conftest import SQUARE_UINT8_IMAGE
 
 # Define your parameter sets
@@ -1050,7 +1050,7 @@ def test_calculate_affine_transform_padding_properties(transform_params, image_s
 @pytest.mark.parametrize(
     ["format", "bbox"],
     [("pascal_voc", (40, 40, 60, 60)),
-     ("albumentations", (0.4, 0.4, 0.6, 0.6))
+     ("algorave", (0.4, 0.4, 0.6, 0.6))
      ],
 )
 @pytest.mark.parametrize(

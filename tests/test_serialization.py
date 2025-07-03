@@ -7,10 +7,10 @@ import numpy as np
 import pytest
 from deepdiff import DeepDiff
 
-import albumentations as A
-import albumentations.augmentations.geometric.functional as fgeometric
-from albumentations.core.serialization import SERIALIZABLE_REGISTRY, shorten_class_name
-from albumentations.core.transforms_interface import ImageOnlyTransform
+import algorave as A
+import algorave.augmentations.geometric.functional as fgeometric
+from algorave.core.serialization import SERIALIZABLE_REGISTRY, shorten_class_name
+from algorave.core.transforms_interface import ImageOnlyTransform
 from tests.aug_definitions import AUGMENTATION_CLS_PARAMS
 from tests.conftest import (
     FLOAT32_IMAGES,
@@ -721,7 +721,7 @@ def test_serialization_v2_to_dict() -> None:
 @pytest.mark.parametrize(
     ["class_fullname", "expected_short_class_name"],
     [
-        ["albumentations.augmentations.transforms.HorizontalFlip", "HorizontalFlip"],
+        ["algorave.augmentations.transforms.HorizontalFlip", "HorizontalFlip"],
         ["HorizontalFlip", "HorizontalFlip"],
         ["some_module.HorizontalFlip", "some_module.HorizontalFlip"],
     ],

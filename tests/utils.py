@@ -7,7 +7,7 @@ from io import StringIO
 
 import numpy as np
 
-import albumentations
+import algorave
 from tests.aug_definitions import AUGMENTATION_CLS_PARAMS
 
 
@@ -84,8 +84,8 @@ def _get_all_valid_transforms_cached():
 
 def _get_all_valid_transforms():
     valid_transforms = []
-    for _, cls in inspect.getmembers(albumentations):
-        if not inspect.isclass(cls) or not issubclass(cls, (albumentations.BasicTransform, albumentations.BaseCompose)):
+    for _, cls in inspect.getmembers(algorave):
+        if not inspect.isclass(cls) or not issubclass(cls, (algorave.BasicTransform, algorave.BaseCompose)):
             continue
 
         valid_transforms.append(cls)
@@ -145,45 +145,45 @@ def get_filtered_transforms(
 
 
 def get_image_only_transforms(
-    custom_arguments: dict[type[albumentations.ImageOnlyTransform], dict] | None = None,
-    except_augmentations: set[type[albumentations.ImageOnlyTransform]] | None = None,
+    custom_arguments: dict[type[algorave.ImageOnlyTransform], dict] | None = None,
+    except_augmentations: set[type[algorave.ImageOnlyTransform]] | None = None,
 ) -> list[tuple[type, dict]]:
-    return get_filtered_transforms((albumentations.ImageOnlyTransform,), custom_arguments, except_augmentations)
+    return get_filtered_transforms((algorave.ImageOnlyTransform,), custom_arguments, except_augmentations)
 
 
 def get_dual_transforms(
-    custom_arguments: dict[type[albumentations.DualTransform], dict] | None = None,
-    except_augmentations: set[type[albumentations.DualTransform]] | None = None,
+    custom_arguments: dict[type[algorave.DualTransform], dict] | None = None,
+    except_augmentations: set[type[algorave.DualTransform]] | None = None,
 ) -> list[tuple[type, dict]]:
     """Get all 2D dual transforms, excluding 3D transforms."""
     return get_filtered_transforms(
-        base_classes=(albumentations.DualTransform,),
+        base_classes=(algorave.DualTransform,),
         custom_arguments=custom_arguments,
         except_augmentations=except_augmentations,
-        exclude_base_classes=(albumentations.Transform3D,)
+        exclude_base_classes=(algorave.Transform3D,)
     )
 
 def get_transforms(
-    custom_arguments: dict[type[albumentations.BasicTransform], dict] | None = None,
-    except_augmentations: set[type[albumentations.BasicTransform]] | None = None,
+    custom_arguments: dict[type[algorave.BasicTransform], dict] | None = None,
+    except_augmentations: set[type[algorave.BasicTransform]] | None = None,
 ) -> list[tuple[type, dict]]:
     """Get all transforms (2D and 3D)."""
     return get_filtered_transforms(
-        base_classes=(albumentations.ImageOnlyTransform, albumentations.DualTransform, albumentations.Transform3D),
+        base_classes=(algorave.ImageOnlyTransform, algorave.DualTransform, algorave.Transform3D),
         custom_arguments=custom_arguments,
         except_augmentations=except_augmentations,
     )
 
 def get_2d_transforms(
-    custom_arguments: dict[type[albumentations.BasicTransform], dict] | None = None,
-    except_augmentations: set[type[albumentations.BasicTransform]] | None = None,
+    custom_arguments: dict[type[algorave.BasicTransform], dict] | None = None,
+    except_augmentations: set[type[algorave.BasicTransform]] | None = None,
 ) -> list[tuple[type, dict]]:
     """Get all 2D transforms (both ImageOnly and Dual transforms), excluding 3D transforms."""
     return get_filtered_transforms(
-        base_classes=(albumentations.ImageOnlyTransform, albumentations.DualTransform),
+        base_classes=(algorave.ImageOnlyTransform, algorave.DualTransform),
         custom_arguments=custom_arguments,
         except_augmentations=except_augmentations,
-        exclude_base_classes=(albumentations.Transform3D,)  # Exclude Transform3D and its children
+        exclude_base_classes=(algorave.Transform3D,)  # Exclude Transform3D and its children
     )
 
 def check_all_augs_exists(
@@ -217,12 +217,12 @@ def check_all_augs_exists(
 
 
 def get_3d_transforms(
-    custom_arguments: dict[type[albumentations.Transform3D], dict] | None = None,
-    except_augmentations: set[type[albumentations.Transform3D]] | None = None,
+    custom_arguments: dict[type[algorave.Transform3D], dict] | None = None,
+    except_augmentations: set[type[algorave.Transform3D]] | None = None,
 ) -> list[tuple[type, dict]]:
     """Get all 3D transforms."""
     return get_filtered_transforms(
-        base_classes=(albumentations.Transform3D,),
+        base_classes=(algorave.Transform3D,),
         custom_arguments=custom_arguments,
         except_augmentations=except_augmentations,
     )

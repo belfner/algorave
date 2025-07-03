@@ -6,10 +6,10 @@ from typing import Any, Literal
 
 import pytest
 import cv2
-from albumentations.core.bbox_utils import BboxParams, BboxProcessor
-from albumentations.core.keypoints_utils import KeypointParams, KeypointsProcessor
+from algorave.core.bbox_utils import BboxParams, BboxProcessor
+from algorave.core.keypoints_utils import KeypointParams, KeypointsProcessor
 
-from albumentations.augmentations.mixing.functional import (
+from algorave.augmentations.mixing.functional import (
     assign_items_to_grid_cells,
     calculate_cell_placements,
     calculate_mosaic_center_point,
@@ -788,7 +788,7 @@ def test_preprocess_selected_mosaic_items_basic():
     np.testing.assert_array_equal(res1["mask"], item1["mask"])
     assert res1["bboxes"] is not None
     assert isinstance(res1["bboxes"], np.ndarray)
-    # Expect format change (pascal_voc -> albumentations) + label encoding
+    # Expect format change (pascal_voc -> algorave) + label encoding
     assert res1["bboxes"].shape == (1, 5) # [x_min, y_min, x_max, y_max, label_id]
     assert res1["keypoints"] is not None
     assert isinstance(res1["keypoints"], np.ndarray)

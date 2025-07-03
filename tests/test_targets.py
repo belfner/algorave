@@ -3,8 +3,8 @@ import re
 import numpy as np
 import pytest
 
-import albumentations as A
-from albumentations.core.type_definitions import ALL_TARGETS, Targets
+import algorave as A
+from algorave.core.type_definitions import ALL_TARGETS, Targets
 
 from tests.conftest import SQUARE_FLOAT_IMAGE
 from .utils import get_dual_transforms, get_image_only_transforms

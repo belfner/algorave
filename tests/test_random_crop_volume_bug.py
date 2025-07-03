@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-import albumentations as A
-from albumentations.augmentations.crops.transforms import CropSizeError
+import algorave as A
+from algorave.augmentations.crops.transforms import CropSizeError
 
 
 def test_random_crop_with_pad_on_volume():

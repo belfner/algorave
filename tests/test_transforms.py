@@ -8,10 +8,10 @@ import numpy as np
 import pytest
 from albucore import to_float, clip, MAX_VALUES_BY_DTYPE
 
-import albumentations as A
-import albumentations.augmentations.pixel.functional as fpixel
-import albumentations.augmentations.geometric.functional as fgeometric
-from albumentations.core.transforms_interface import BasicTransform
+import algorave as A
+import algorave.augmentations.pixel.functional as fpixel
+import algorave.augmentations.geometric.functional as fgeometric
+from algorave.core.transforms_interface import BasicTransform
 from tests.conftest import (
     IMAGES,
     SQUARE_FLOAT_IMAGE,
@@ -185,7 +185,7 @@ def test_multiprocessing_support(mp_pool, augmentation_cls, params):
 
 
 def test_force_apply():
-    """Unit test for https://github.com/albumentations-team/albumentations/issues/189"""
+    """Unit test for https://github.com/algorave-team/algorave/issues/189"""
     aug = A.Compose(
         [
             A.OneOrOther(

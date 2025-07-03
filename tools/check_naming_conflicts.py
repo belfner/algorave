@@ -84,7 +84,7 @@ def get_defined_names(base_dir: str) -> set[str]:
     return defined_names
 
 
-def find_conflicts(base_dir: str = "albumentations") -> tuple[set[str], set[str], set[str]]:
+def find_conflicts(base_dir: str = "algorave") -> tuple[set[str], set[str], set[str]]:
     """Find conflicts between module names and defined names.
 
     Args:
@@ -104,7 +104,7 @@ def find_conflicts(base_dir: str = "albumentations") -> tuple[set[str], set[str]
 
 def main():
     """Main entry point for the script."""
-    base_dir = "albumentations"
+    base_dir = "algorave"
 
     # Check if base directory exists
     if not Path(base_dir).is_dir():

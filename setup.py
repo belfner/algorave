@@ -54,6 +54,6 @@ if opencv_req := choose_opencv_requirement():
     INSTALL_REQUIRES.append(opencv_req)
 
 setup(
-    packages=find_packages(exclude=["tests", "tools", "benchmark"], include=['albumentations*']),
+    packages=find_packages(exclude=["tests", "tools", "benchmark"], include=['algorave*']),
     install_requires=INSTALL_REQUIRES,
 )

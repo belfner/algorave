@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-from albumentations.augmentations.geometric import functional as fgeometric
-from albumentations.augmentations.geometric.functional import (
+from algorave.augmentations.geometric import functional as fgeometric
+from algorave.augmentations.geometric.functional import (
     from_distance_maps,
     to_distance_maps,
 )
