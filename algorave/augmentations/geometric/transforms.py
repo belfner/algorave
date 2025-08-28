@@ -14,7 +14,7 @@ from warnings import warn
 
 import cv2
 import numpy as np
-from albucore import batch_transform, is_grayscale_image, is_rgb_image
+from algocore import batch_transform, is_grayscale_image, is_rgb_image
 from pydantic import (
     AfterValidator,
     Field,

@@ -3,7 +3,7 @@ from typing import Type
 import cv2
 import numpy as np
 import pytest
-from albucore import to_float
+from algocore import to_float
 
 from .aug_definitions import transforms2metadata_key
 

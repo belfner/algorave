@@ -15,7 +15,7 @@ from warnings import warn
 
 import cv2
 import numpy as np
-from albucore import (
+from algocore import (
     MAX_VALUES_BY_DTYPE,
     add,
     add_array,
@@ -1338,11 +1338,11 @@ def to_gray_from_lab(img: np.ndarray) -> np.ndarray:
     """Convert an RGB image or batch of images to grayscale using LAB color space.
 
     This function converts RGB images to grayscale by first converting to LAB color space
-    and then extracting the L (lightness) channel. It uses albucore's reshape utilities
+    and then extracting the L (lightness) channel. It uses algocore's reshape utilities
     to efficiently handle batches/volumes by processing them as a single tall image.
 
     Implementation Details:
-        The function uses albucore's reshape_for_channel and restore_from_channel functions:
+        The function uses algocore's reshape_for_channel and restore_from_channel functions:
         - reshape_for_channel: Flattens batches/volumes to 2D format for OpenCV processing
         - restore_from_channel: Restores the original shape after processing
 
@@ -1418,7 +1418,7 @@ def to_gray_from_lab(img: np.ndarray) -> np.ndarray:
         has_batch_dim = True
         has_depth_dim = True
 
-    # Use reshape utilities from albucore for efficient batch processing
+    # Use reshape utilities from algocore for efficient batch processing
     flattened, original_shape = reshape_for_channel(img, has_batch_dim=has_batch_dim, has_depth_dim=has_depth_dim)
 
     lab = cv2.cvtColor(flattened, cv2.COLOR_RGB2LAB)

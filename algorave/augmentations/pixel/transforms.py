@@ -14,10 +14,10 @@ from collections.abc import Sequence
 from functools import partial
 from typing import Annotated, Any, Callable, Union, cast
 
-import albucore
+import algocore
 import cv2
 import numpy as np
-from albucore import (
+from algocore import (
     MAX_VALUES_BY_DTYPE,
     NUM_MULTI_CHANNEL_DIMENSIONS,
     batch_transform,
@@ -2527,7 +2527,7 @@ class RandomBrightnessContrast(ImageOnlyTransform):
             np.ndarray: The image with the applied brightness and contrast adjustment.
 
         """
-        return albucore.multiply_add(img, alpha, beta, inplace=False)
+        return algocore.multiply_add(img, alpha, beta, inplace=False)
 
     def apply_to_images(self, images: np.ndarray, *args: Any, **params: Any) -> np.ndarray:
         """Apply the brightness and contrast adjustment to a batch of images.

@@ -15,7 +15,7 @@ from typing import TYPE_CHECKING, Any, Callable, TypeVar, cast
 
 import cv2
 import numpy as np
-from albucore.utils import (
+from algocore.utils import (
     is_grayscale_image,
     is_multispectral_image,
     is_rgb_image,

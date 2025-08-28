@@ -13,7 +13,7 @@ from typing import Any
 
 import cv2
 import numpy as np
-from albucore import maybe_process_in_chunks, preserve_channel_dim
+from algocore import maybe_process_in_chunks, preserve_channel_dim
 
 from algorave.augmentations.geometric import functional as fgeometric
 from algorave.augmentations.utils import handle_empty_array

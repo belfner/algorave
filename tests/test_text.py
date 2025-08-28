@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 import random
-from albucore import get_num_channels
+from algocore import get_num_channels
 from PIL import Image, ImageFont
 
 import algorave.augmentations.text.functional as ftext

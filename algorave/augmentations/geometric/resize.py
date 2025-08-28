@@ -11,7 +11,7 @@ from typing import Any, Literal, cast
 
 import cv2
 import numpy as np
-from albucore import batch_transform
+from algocore import batch_transform
 from pydantic import Field, field_validator, model_validator
 from typing_extensions import Self
 

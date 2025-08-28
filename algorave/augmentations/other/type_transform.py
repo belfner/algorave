@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any
 
 import numpy as np
-from albucore import (
+from algocore import (
     from_float,
     get_max_value,
     to_float,

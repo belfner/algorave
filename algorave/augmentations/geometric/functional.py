@@ -15,7 +15,7 @@ from warnings import warn
 
 import cv2
 import numpy as np
-from albucore import (
+from algocore import (
     get_num_channels,
     hflip,
     maybe_process_in_chunks,

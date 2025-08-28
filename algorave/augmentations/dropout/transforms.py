@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any, Literal, cast
 
 import numpy as np
-from albucore import get_num_channels
+from algocore import get_num_channels
 from pydantic import Field
 
 from algorave.augmentations.dropout import functional as fdropout

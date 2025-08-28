@@ -3,7 +3,7 @@ import hashlib
 import cv2
 import numpy as np
 import pytest
-from albucore import (
+from algocore import (
     MAX_VALUES_BY_DTYPE,
     clip,
     get_num_channels,

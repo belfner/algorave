@@ -12,7 +12,7 @@ from typing import Literal, cast
 
 import cv2
 import numpy as np
-from albucore import (
+from algocore import (
     MAX_VALUES_BY_DTYPE,
     NUM_MULTI_CHANNEL_DIMENSIONS,
     get_num_channels,

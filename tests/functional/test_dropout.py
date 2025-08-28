@@ -3,7 +3,7 @@ import numpy as np
 from skimage.measure import label as ski_label
 from algorave.augmentations.dropout.functional import label as cv_label
 
-from albucore import MAX_VALUES_BY_DTYPE
+from algocore import MAX_VALUES_BY_DTYPE
 
 import algorave.augmentations.dropout.functional as fdropout
 

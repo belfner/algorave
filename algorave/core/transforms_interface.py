@@ -16,7 +16,7 @@ from warnings import warn
 
 import cv2
 import numpy as np
-from albucore import batch_transform
+from algocore import batch_transform
 from pydantic import BaseModel, ConfigDict, Field
 
 from algorave.core.bbox_utils import BboxProcessor

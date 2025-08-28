@@ -6,7 +6,7 @@ from typing import Any
 import cv2
 import numpy as np
 import pytest
-from albucore import to_float, clip, MAX_VALUES_BY_DTYPE
+from algocore import to_float, clip, MAX_VALUES_BY_DTYPE
 
 import algorave as A
 import algorave.augmentations.pixel.functional as fpixel

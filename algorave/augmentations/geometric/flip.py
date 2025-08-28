@@ -27,7 +27,7 @@ from __future__ import annotations
 from typing import Any, Literal
 
 import numpy as np
-from albucore import hflip, vflip
+from algocore import hflip, vflip
 
 from algorave.core.transforms_interface import (
     BaseTransformInitSchema,

@@ -12,7 +12,7 @@ from typing import TYPE_CHECKING, Any
 
 import cv2
 import numpy as np
-from albucore import (
+from algocore import (
     MONO_CHANNEL_DIMENSIONS,
     NUM_MULTI_CHANNEL_DIMENSIONS,
     NUM_RGB_CHANNELS,

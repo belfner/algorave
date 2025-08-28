@@ -13,7 +13,7 @@ from typing import Literal
 
 import cv2
 import numpy as np
-from albucore import add_weighted, clip, clipped, from_float, get_num_channels, preserve_channel_dim, to_float, uint8_io
+from algocore import add_weighted, clip, clipped, from_float, get_num_channels, preserve_channel_dim, to_float, uint8_io
 from typing_extensions import Protocol
 
 import algorave.augmentations.geometric.functional as fgeometric

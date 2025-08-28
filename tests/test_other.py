@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from albucore.utils import get_max_value
+from algocore.utils import get_max_value
 
 from algorave.augmentations import FromFloat, ToFloat
 

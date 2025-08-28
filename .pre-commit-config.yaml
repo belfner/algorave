@@ -64,9 +64,9 @@ repos:
       pass_filenames: true
   - repo: local
     hooks:
-      - id: check-albucore-version
-        name: Check albucore version
-        entry: python ./tools/check_albucore_version.py
+      - id: check-algocore-version
+        name: Check algocore version
+        entry: python ./tools/check_algocore_version.py
         language: system
         files: setup.py
   - repo: https://github.com/astral-sh/ruff-pre-commit
